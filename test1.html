@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>ISCP</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/ken_css.css">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <style>
+         /*
+         LAST
+         ==============================================================================================
+         CAUTION>BOOTSTRAP CSS MODIFICATION [START]<CAUION 
+         ==============================================================================================
+         */
+         .list-group-item {
+         position: relative;
+         display: block;
+         padding: 1px 1px;
+         margin-bottom: -1px;
+         background-color: #3f3;
+         border: 1px solid #3f3;
+         }
+         /*DropDown menu change P.S its more than that I am lazy to explain however this comment will remind me of what it is*/
+         .navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus,.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:focus,.navbar-inverse .navbar-nav>.open>a:hover {
+         color:#fff;
+         background-color: #55ff00;
+         }
+         /*DropDown menu change*/
+         .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus,.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover {
+         color:#fff;
+         background-color: #0000cc;
+         }
+         /*Boder  shitt of navBar took 1h to find */
+         .navbar-inverse {
+         border-color:  #0000cc;
+         }
+         /* onClick color of each  ACTIVE tab on navBar*/
+         .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+         color: #fff;
+         background-color:#55ff00;
+         }
+         /*Drop down menu properties */
+         .dropdown-menu>li>a {
+         display: block;
+         padding: 3px 20px;
+         clear: both;
+         font-weight: 400;
+         line-height: 2.4;
+         white-space: nowrap;
+         }
+         /* onClick color of each  open tab on navBar */
+         .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+         color: #fff;
+         background-color: #55ff00;
+         }
+         /*Hover color change to white in tab text - icons*/
+         .navbar-inverse .navbar-nav>li>a:hover {
+         color: #fff;
+         background-color: transparent;
+         } 
+         /*Color of wholw navbar*/
+         #myNavbar1 {
+         background-color:  #0000cc;
+         }
+         /*Color of Text-Icons in Eact Tab*/
+         .navbar-inverse .navbar-nav>li>a {
+         color: #00e673;
+         font-style:bold;
+         font-weight: 600;
+         }
+         .col-sm-1 {
+         position:relative;
+         min-height: 100px;
+         padding-right:15px;
+         padding-left:15px;
+         }
+         .navbar-inverse .navbar-toggle:hover {
+         background-color: #6c38b5;
+         }
+         navbar.less:579
+         .navbar-inverse .navbar-toggle {
+         border-color: #988eaf;
+         }
+         nav-vertical-align.less:7
+         .navbar-toggle {
+         position: relative;
+         float: right;
+         margin-top: 18px;
+         margin-right: 15px;
+         margin-bottom: 8px;
+         background-color: transparent;
+         background-image: none;
+         border: 1px solid transparent;
+         border-radius: 4px;
+         }
+         .navbar-toggle {
+         position: relative;
+         float: right;
+         padding: 9px 10px;
+         margin-top: 18px;
+         margin-right: 15px;
+         margin-bottom: 8px;
+         background-color: transparent;
+         background-image: none;
+         border: 1px solid transparent;
+         border-radius: 4px;
+         }
+         body {
+         background-color: #00ffff;
+         }
+         @media only screen and (max-width: 1025px)
+         {
+         .hi { 
+         display:none;
+         }
+         }
+         @media only screen and (max-width: 799px)
+         {
+         #useless {
+         display: none;
+         }
+         #column1 {
+         display: none;
+         }
+         .imageH { 
+         display:none;
+         }
+         #columnF {
+         display: none;
+         }
+         }
+         @media only screen and (min-width: 766px)
+         {
+         #home {
+         align-content: center;padding-left: 14px;
+         font-size:30px;
+         }
+         #gi {
+         align-content: center;padding-left: 70px;
+         font-size:30px;
+         }
+         #ac {
+         align-content: center;padding-left: 29px; 
+         font-size:28px;
+         }
+         #ec {
+         align-content: center;padding-left: 66px; 
+         font-size: 30px;
+         }
+         #cl {
+         align-content: center;padding-left: 32px;  
+         padding-bottom: 5px;  font-size: 25px;
+         }
+         #cc {
+         align-content: center;padding-left: 37px;
+         padding-bottom: 5px;  font-size: 25px;
+         }
+         #it {
+         align-content: center;padding-left: 30px;
+         padding-bottom: 5px ;font-size: 25px
+         }
+         }
+         @media only screen and (max-width: 766px)
+         {
+         #home {
+         font-size:30px;
+         }
+         #gi {
+         font-size:30px;
+         }
+         #ac {
+         font-size:28px;
+         }
+         #ec {
+         font-size: 30px;
+         }
+         #cl {
+         padding-bottom: 5px;  font-size: 25px;
+         }
+         #cc {
+         padding-bottom: 5px;  font-size: 25px;
+         }
+         #it {
+         padding-bottom: 5px ;font-size: 25px
+         }
+         }
+         /*
+         COLUMN MANAGEMENT
+         =======================================================================================
+         */
+         /*.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
+         position:relative;
+         min-height:300px;
+         padding-right:15px;
+         padding-left:15px;
+         } */
+         /*
+         ============================================================================================
+         CAUTION>BOOTSTRAP CSS MODIFICATION [END]<CAUION 
+         =============================================================================================
+         */
+         .dropdown-menu {
+         background-color: #55ff00  ;
+         }
+         nav navbar-nav navbar-right.active {
+         background-color: #55ff00;
+         }
+         .navbar-btn {
+         margin-top: 15px;
+         margin-bottom: 10px;
+         padding-right: 6px;
+         padding-left: 6px;
+         margin-left: 10px;
+         margin-right:20px;
+         }
+         .btn-danger {
+         color: #fff;
+         background-color: #a6ff4d;
+         border-color: #a6ff4d;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="hi">
+         <div class="container-fluid" style="background-color: #72CEFF">
+            <div class="row">
+               <div class="col-sm-1" style="background-color:#72CEFF;">
+                  <img  src="ken_images/iscplogo3.jpg" width="380px" height="105px"  style="margin-left: -39px">
+               </div>
+               <div class="col-sm-10" style="background-color:#72CEff;">
+                  <h1 class="cab"></h1>
+               </div>
+            </div>
+         </div>
+      </div>
+      <nav class="navbar navbar-inverse" id="myNavbar1">
+         <div class="container-fluid" style="padding-left: 0px">
+            <div class="navbar-header" style="background-color: #6c38b2;" >
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>                        
+               </button>
+               <a class="navbar-brand" href="#" style="background-color: #6c38b5;margin-bottom: 20px;margin-left: 5px;">
+                  <h1 style="color:  #00e673;margin-top: 2px">ISCP</h1>
+               </a>
+               <!-- -->
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar" >
+               <!-- <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="">Page 1-1</a></li>
+                      <li><a href="#">Page 1-2</a></li>
+                      <li><a href="#">Page 1-3</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Page 2</a></li>
+                  <li><a href="#">Page 3</a></li>
+                  </ul> -->
+               <ul class="nav navbar-nav navbar-right" >
+                  <li class="active"><a  href="#" ><i id="home"  class="fa fa-home" ></i><br>      HOME</a></li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca"><i id="gi" class="fa fa-info-circle" ></i><br>      GENERAL INFORMATION</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca" ><i id="ac"  class="fa fa-graduation-cap" ></i><br>      ACADMICS</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca"><i id="ec" class="fa fa-trophy"></i><br>      EXTRA CURRICULARS</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca"><i id="cl"  class="fa fa-bicycle" ></i> <br>    CAMPUS LIFE</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca"><i id="cc"  class="fa fa-life-ring" ></i> <br>     COUNSELLING</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca" ><i id="it"  class="fa fa-users" ></i><br>      ISCP TEAM</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                     </ul>
+                  </li>
+               </ul>
+               <!-- <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#" id="bca"><i class="fa fa-external-link-square" style="align-content: center;padding-left: 12px" ></i><br>Login</a></li>
+                  </ul> -->
+            </div>
+         </div>
+      </nav>
+      <div class="container" id="trialjq" style="overflow: hidden;width: 100% ;background-color:   #00ffff">
+         <div style="float:left; width:10%;"></div>
+         <div style="float:right ;;width: 90%;margin-right: 20px">
+            <div class="row">
+               <div id="column11" class="col-sm-3" style="background-color:#ffb3ff;min-height:200px;margin: 4px;margin-right:20px">
+                  <h2 style="position: absolute;bottom: 0;text-align: center;margin-left: 44px;color:  #4747d1;font-family: Courier New;font-weight: 600;margin-right: 10px"> WELCOME TO </h2>
+               </div>
+               <div  id="column1" class="col-sm-5" style="background-color:#72CEFF;min-height: 200px;margin: 4px;width: 299px">
+                 <div class="hvr-pulse"> <img class = "imageH" src="ken_images/logoiscp.jpg" height="200px" width="250px">
+               </div></div>
+               <div id="column11" class="col-sm-3" style="background-color:#00ffff;min-height:200px;margin: 4px;margin-left: 20px"><div class="hvr-pulse">
+                  <h2 style="font-size: 24px;font-weight: 900;color: #4d4dff;font-family:Courier New">INSTITUTE</h2>
+                  <h2 style="font-size: 24px;font-weight: 900;color: #4d4dff;font-family:Courier New">STUDENT</h2>
+                  <h2 style="font-size: 24px;font-weight: 900;color: #4d4dff;font-family:Courier New">COMPANION</h2>
+                  <h2 style="font-size: 24px;font-weight: 900;color: #4d4dff;font-family:Courier New">PROGRAME</h2>
+               </div></div>
+            </div>
+            <div class="row">
+               <div id="column111" class="col-sm-8" style ="background-color:  #99ccff;min-height: 200px;margin: 5px; border: 1px solid #adbed8 border-radius:2px">
+                  <p style="font-weight:700;text-align: justify;font-style: bold; font-size: 12px; color: #00004d;margin: 10px">There is a self-perpetuating and constant feeling of self improvement in every individual. It is a self-evident fact that our thirst to learn more, has brought us to the doorsteps of IIT Bombay. The institute has established world-class infrastructure and facilities for us to accomplish what we are here for. This calls for better coordination at each and every level of operation.</p>
+                  <p style="font-weight:700;text-align: justify;font-style: bold; font-size: 12px;color: #00004d;margin: 10px">The Student Companion Programme is specifically designed to cater to the needs of PG community of IIT Bombay. The post graduate students in the institute face various issues which are typically non-academic and coalition of academic in nature. These issues need to be addressed; the ISCP provides a platform for the students to get help at formal as well as informal lines. The current scenario, thus, calls for a Post Graduate student-oriented guidance program which addresses their peculiar needs and helps them in becoming sound scientists, engineers and citizens.ISCP is monitored by the Dean AP office. Students are requested to make best use of the resources made available to them by the ISCP.</p>
+               </div>
+               <div  id="column11" class="col-sm-2" style="background-color: #ffb3ff;min-height: 200px;margin: 5px">
+                  <h2 style="position: absolute;bottom: 0;text-align: center;margin-left: 8px;color:  #4747d1;font-family: Courier New;font-weight: 600"> ABOUT US </h2>
+               </div>
+            </div>
+            <br>
+            <div class="row">
+               <div id="column11" class="col-sm-3" style="min-height: 300px;background-color: #00ff80;margin: 4px;">
+                  <h2 style="position: absolute;bottom:0;text-align: center;margin-left: 35px;color:  #4747d1;font-family: Courier New;font-weight: 600"> QUICK LINKS </h2>
+               </div>
+               <div id="column111" class="col-sm-4" style="min-height: 200px;background-color: #00ffff;margin: 4px;padding-left: 0px;padding-right: 0px;padding-top: 8px">
+                  <div class="list-group">
+                     <a href="http://iitb.ac.in/en/about-iit-bombay" class="list-group-item">
+                        <p class="element">ABOUT IIT-Bombay</p>
+                     </a>
+                     <a href="https://www.facebook.com/groups/1765868867030232/" class="list-group-item">
+                        <p class="element">PG-Fb Group</p>
+                     </a>
+                     <a href="https://gymkhana.iitb.ac.in/~scp/scp/image/iitbmap.jpg" class="list-group-item">
+                        <p class="element">IIT-Bombay Map</p>
+                     </a>
+                     <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/tumtum_routes.pdf" class="list-group-item">
+                        <p class="element">Tum Tum Routes</p>
+                     </a>
+                     <a href="https://play.google.com/store/apps/details?id=in.designlabs.instimap" class="list-group-item">
+                        <p class="element">Institiute Map App</p>
+                     </a>
+                     <a href="https://play.google.com/store/apps/details?id=com.mobond.mindicator" class="list-group-item">
+                        <p class="element">Local Train App</p>
+                     </a>
+                     <a href="http://www.dnaindia.com/mumbai/report_a-companion-for-iit-bombay-pg-students_1423935" class="list-group-item">
+                        <p class="element">News Letter on ISCP in DNA(2010)</p>
+                     </a>
+                     <a href="#" class="list-group-item">
+                        <p class="element">Find Your Mentor</p>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-sm-4"  style="height: 300px;background-color:#00ffff ">
+                  <!-- TEST TEST  TEST TEST -->
+                  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fiitb.iscp%2F%3Fref%3Dbr_rs&tabs=timeline&width=340&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                  <!-- TEST TEST  TEST TEST -->
+               </div>
+            </div>
+            <div style="margin-top: -10px">
+            <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
+               <h3 style="font-family: Courier New;color:#001dff;font-weight: 600"> NOTIFICATIONS </h3>
+              <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
+
+               <div id="carousel-example" class="carousel slide" data-ride="carousel" style="background-color:#99ccff;margin-left: -15px ">
+                  <!-- Wrapper for slides -->
+                  <div class="row">
+                     <div class="col-xs-offset-3 col-xs-6">
+                        <div class="carousel-inner">
+                           <div class="item active">
+                              <div class="carousel-content">
+                                 <div>
+                                    <h3 style="font-weight: 900">PG New Entrants(Ph.D.,M.Tech.,M.Des., M.Phil., M.Mgt.)</h3>
+                                    <p>Orientation : 14th July, 2016 (Thursday) to 16th July, 2016 (Saturday). (Including Teaching Assistant and R&D/ IRCC Orientation.)
+                                       Reporting and registration: 14th July, 2016 (Thursday) Instructions begin on 18th July, 2016 (Monday)
+                                       For more details see <a href="http://www.iitb.ac.in/newacadhome/toacadcalender.jsp" target="_blank" style="color: #f44242">academic calender </a>.
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <div class="carousel-content">
+                                 <div>
+                                    <h3 style="font-weight: 900">UG New Entrants admitted through JAM (M.Sc. , M.Sc.-PhD) Orientation: 16th July, 2016 (Saturday),17th July, 2016 (Sunday)</h3>
+                                    <p>Reporting and registration: 16th July, 2016 (Saturday) Instructions begin: 18th July, 2016 (Monday)
+                                       For more details see <a href="http://www.iitb.ac.in/newacadhome/toacadcalender.jsp" target="_blank" style="color: #f44242">academic calender </a> .
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <div class="carousel-content">
+                                 <div>
+                                    <h3 style="font-weight: 900">Orientation of new entrants of MTech , MPhil , MSc will be on 14th July , 2016 .</h3>
+                                    <p></p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <div class="carousel-content">
+                                 <div>
+                                    <h3 style="font-weight: 900"></h3>
+                                    <p>In case you have any problem , you can contact your student companion , department coordinator or overall coordinator . Contact details of overall and department coordinators can be found <a href="https://gymkhana.iitb.ac.in/~scp/scp/index.html#oc" target="_blank" style="color: #f44242">here </a></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- Controls --> <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+               </div>
+            </div>
+            <div>
+            <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
+               <h3 class="headding">FACULTY COORDINATOR</h3>
+               <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
+            </div>
+            <div class="row">
+               <div  class="col-sm-4">
+                  <div class="container" >
+                     <div class="row">
+                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
+                           <div class="card hovercard" style="background-color:  #ffffff">
+                              <div class="cardheader">
+                              </div>
+                              <div class="avatar">
+                                 <img alt="" src="ken_images/prabhu.jpg">
+                              </div>
+                              <div class="info">
+                                 <div class="title">
+                                    <a target="_blank" href="http://www.iitb.ac.in/en/employee/prof-n-prabhu">N Prabhu</a>
+                                 </div>
+                                 <div class="desc">Faculty Cordinator</div>
+                                 <div class="desc"><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp;0222 576 7624</div>
+                                 <div class="desc"><i class="fa fa-envelope-open" aria-hidden="true"></i>&nbsp;nprabhu@iitb.ac.in</div>
+                              </div>
+                              <div class="bottom">
+                                 <!--   <a class="btn btn-primary btn-twitter btn-sm" href="#">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" rel="publisher"
+                                       href="#">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a> -->
+                                 <a class="btn btn-primary btn-sm" rel="publisher"
+                                    href="#">
+                                 <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div id="columnF" class="col-sm-4"> 
+               </div>
+               <div  id="columnF" class="col-sm-4"> </div>
+            </div>
+            <div>
+            <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
+               <h3 class="headding">STUDENT COUNSELORS</h3>
+               <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
+               <p class="element">Over and above your friends/ mentors/ faculty (guide), counselling facility is offered by the institute for addressing students' academic and personal issues. Our student counsellors are Mrs. Amita Tagare and Ms. Hima Anaredy.</p>
+               <hr style="height:.5px;border:none;color:#333;background-color:#00bfff;margin-left: -10px" />
+            </div>
+            <div class="row">
+               <div  class="col-sm-4">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
+                           <div class="card hovercard" style="background-color:  #ffffff">
+                              <div class="cardheader">
+                              </div>
+                              <div class="avatar">
+                                 <img alt="" src="ken_images/amita.jpg">
+                              </div>
+                              <div class="info">
+                                 <div class="title">
+                                    <a target="_blank" href="#">MRS. AMITA TAGARE</a>
+                                 </div>
+                                 <div class="desc">Student Councelor</div>
+                                 <div class="desc">
+                                    <p class="element">Mrs. Amita Tagare has over 20 years of experience and is directly associated with the office of the Dean of Students' Affairs (SA).
+                                    </p>
+                                 </div>
+                                 <div class="desc"> <br></div>
+                                 <div class="desc"> <br><br> </div>
+                              </div>
+                              <div class="bottom">
+                                 <!--    <a class="btn btn-primary btn-twitter btn-sm" href="#">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" rel="publisher"
+                                    href="#">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a> -->
+                                 <a class="btn btn-primary btn-sm" rel="publisher"
+                                    href="https://www.facebook.com/amita.tagare">
+                                 <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-4">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
+                           <div class="card hovercard" style="background-color:  #ffffff">
+                              <div class="cardheader">
+                              </div>
+                              <div class="avatar">
+                                 <img alt="" src="ken_images/hima.jpg">
+                              </div>
+                              <div class="info">
+                                 <div class="title">
+                                    <a target="_blank" href="#">MS. HIMA ANAREDY</a>
+                                 </div>
+                                 <div class="desc">Student Councelor</div>
+                                 <div class="desc">
+                                    <p class="element">Ms. Hima Anaredy  has a experience of counselling students for the last 5 years and is with IIT for more than a year now.</p>
+                                 </div>
+                                 <div class="desc"><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp;022 25769071 or 9820747079</div>
+                                 <div class="desc"><i class="fa fa-envelope-open" aria-hidden="true"></i>&nbsp;maithili@iitb.ac.in or hima.anaredy@iitb.ac.in</div>
+                              </div>
+                              <div class="bottom">
+                                 <!--   <a class="btn btn-primary btn-twitter btn-sm" href="#">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" rel="publisher"
+                                    href="#">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a> -->
+                                 <a class="btn btn-primary btn-sm" rel="publisher"
+                                    href="https://www.facebook.com/hima.chhatbar">
+                                 <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div  id="columnF" class="col-sm-4"> </div>
+            </div>
+            <div>
+             <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
+               <h3 class="headding">OVERALL COORDINATOR</h3>
+              <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />  
+            </div>
+            <div class="row">
+               <div  class="col-sm-4">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
+                           <div class="card hovercard" style="background-color:  #ffffff">
+                              <div class="cardheader">
+                              </div>
+                              <div class="avatar">
+                                 <img alt="" src="ken_images/abhilasha1.jpg">
+                              </div>
+                              <div class="info">
+                                 <div class="title">
+                                    <a target="_blank" href="#">ABHISHA CHAUHAN</a>
+                                 </div>
+                                 <div class="desc">AeroSpace (M.Tech)</div>
+                                 <div class="desc">
+                                    <i class="fa fa-whatsapp" aria-hidden="true">&nbsp;9987880963</i>
+                                 </div>
+                                 <div class="desc"><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp;9987880963</div>
+                                 <div class="desc"><i class="fa fa-envelope-open" aria-hidden="true"></i>&nbsp; adiabh13792@gmail.com</div>
+                              </div>
+                              <div class="bottom">
+                                 <!--    <a class="btn btn-primary btn-twitter btn-sm" href="#">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" rel="publisher"
+                                    href="#">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a> -->
+                                 <a class="btn btn-primary btn-sm" rel="publisher"
+                                    href="https://www.facebook.com/abhisha.chauhan.37">
+                                 <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-4">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
+                           <div class="card hovercard" style="background-color:  #ffffff">
+                              <div class="cardheader">
+                              </div>
+                              <div class="avatar">
+                                 <img alt="" src="ken_images/das.jpg">
+                              </div>
+                              <div class="info">
+                                 <div class="title">
+                                    <a target="_blank" href="#">SANDIPAN DAS</a>
+                                 </div>
+                                 <div class="desc">MEMS (M.Tech)</div>
+                                 <div class="desc">
+                                    <i class="fa fa-whatsapp" aria-hidden="true"> &nbsp;9547156103</i>
+                                 </div>
+                                 <div class="desc"><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp; 8670263567</div>
+                                 <div class="desc"><i class="fa fa-envelope-open" aria-hidden="true"></i>&nbsp;nit.mme.sandipan.das@gmail.com</div>
+                              </div>
+                              <div class="bottom">
+                                 <!--   <a class="btn btn-primary btn-twitter btn-sm" href="#">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" rel="publisher"
+                                    href="#">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a> -->
+                                 <a class="btn btn-primary btn-sm" rel="publisher"
+                                    href="https://www.facebook.com/sandipan.das1994">
+                                 <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div  class="col-sm-4">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
+                           <div class="card hovercard" style="background-color:  #ffffff">
+                              <div class="cardheader">
+                              </div>
+                              <div class="avatar">
+                                 <img alt="" src="ken_images/vinay1.jpg">
+                              </div>
+                              <div class="info">
+                                 <div class="title">
+                                    <a target="_blank" href="#">VINAY RAI</a>
+                                 </div>
+                                 <div class="desc">IEOR (M.Tech.)</div>
+                                 <div class="desc">
+                                    <i class="fa fa-whatsapp" aria-hidden="true">&nbsp; 9711664898</i>
+                                 </div>
+                                 <div class="desc"><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp; 9711664898</div>
+                                 <div class="desc"><i class="fa fa-envelope-open" aria-hidden="true"></i>&nbsp;vinayrai111@gmail.com</div>
+                              </div>
+                              <div class="bottom">
+                                 <!--   <a class="btn btn-primary btn-twitter btn-sm" href="#">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" rel="publisher"
+                                    href="#">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a> -->
+                                 <a class="btn btn-primary btn-sm" rel="publisher"
+                                    href="https://www.facebook.com/vinayrai111">
+                                 <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div>
+            </div>
+            <div class="row">
+               <div  class="col-sm-4">
+                  <div class="container">
+                     <div class="row">
+                    <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />  
+                        <h3 class="headding">DESIGN NOMINEE</h3>
+                     <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />    
+                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
+                           <div class="card hovercard" style="background-color:  #ffffff">
+                              <div class="cardheader">
+                              </div>
+                              <div class="avatar">
+                                 <img alt="" src="ken_images/tanmy1.jpg">
+                              </div>
+                              <div class="info">
+                                 <div class="title">
+                                    <a target="_blank" href="#">TANUMOY KAR</a>
+                                 </div>
+                                 <div class="desc">MECHANICAL ENG. (M.Tech.)</div>
+                                 <div class="desc">
+                                    <i class="fa fa-whatsapp" aria-hidden="true">&nbsp;9449686385</i>
+                                 </div>
+                                 <div class="desc"><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp;9449686385</div>
+                                 <div class="desc"><i class="fa fa-envelope-open" aria-hidden="true"></i>&nbsp;vinayrai111@gmail.com</div>
+                              </div>
+                              <div class="bottom">
+                                 <!--    <a class="btn btn-primary btn-twitter btn-sm" href="#">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" rel="publisher"
+                                    href="#">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a> -->
+                                 <a class="btn btn-primary btn-sm" rel="publisher"
+                                    href="https://www.facebook.com/profile.php?id=100011379584331">
+                                 <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-sm-4">
+                  <div class="container">
+                     <div class="row">
+                    
+                         <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />       
+                            <h3 class="headding"> WEB NOMINEE</h3> 
+                         <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />  
+                      
+ 
+                     
+
+                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
+                           <div class="card hovercard" style="background-color:  #ffffff">
+                              <div class="cardheader">
+                              </div>
+                              <div class="avatar">
+                                 <img alt="" src="ken_images/el.jpg">
+                              </div>
+                              <div class="info">
+                                 <div class="title">
+                                    <a target="_blank" href="#">AMAN GAUTAM</a>
+                                 </div>
+                                 <div class="desc">MECHANICAL ENG. (B.Tech.)</div>
+                                 <div class="desc">
+                                    <i class="fa fa-whatsapp" aria-hidden="true">&nbsp;7045800502</i>
+                                 </div>
+                                 <div class="desc"><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp;9415056043</div>
+                                 <div class="desc"><i class="fa fa-envelope-open" aria-hidden="true"></i>&nbsp;amangautam1501@gmail.com</div>
+                              </div>
+                              <div class="bottom">
+                                 <!--   <a class="btn btn-primary btn-twitter btn-sm" href="#">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" rel="publisher"
+                                    href="#">
+                                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                    </a> -->
+                                 <a class="btn btn-primary btn-sm" rel="publisher"
+                                    href="https://www.facebook.com/aman.gautam.7587370">
+                                 <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div  id="columnF" class="col-sm-4"> </div>
+            </div>
+            <br><br><br><br><br>
+         </div>
+      </div>
+      <script>
+         setCarouselHeight('#carousel-example');
+         
+         function setCarouselHeight(id)
+         {
+             var slideHeight = [];
+             $(id+' .item').each(function()
+             {
+                 // add all slide heights to an array
+                 slideHeight.push($(this).height());
+             });
+         
+             // find the tallest item
+             max = Math.max.apply(null, slideHeight);
+         
+             // set the slide's height
+             $(id+' .carousel-content').each(function()
+             {
+                 $(this).css('height',max+'px');
+             });
+         }
+         
+      </script>
+   </body>
+</html>
