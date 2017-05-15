@@ -13,107 +13,17 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <style>
-         /*
-         LAST
-         ==============================================================================================
-         CAUTION>BOOTSTRAP CSS MODIFICATION [START]<CAUION 
-         ==============================================================================================
-         */
-         .list-group-item {
-         position: relative;
-         display: block;
-         padding: 1px 1px;
-         margin-bottom: -1px;
-         background-color: #3f3;
-         border: 1px solid #3f3;
-         }
-         /*DropDown menu change P.S its more than that I am lazy to explain however this comment will remind me of what it is*/
-         .navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus,.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:focus,.navbar-inverse .navbar-nav>.open>a:hover {
-         color:#fff;
-         background-color: #55ff00;
-         }
-         /*DropDown menu change*/
-         .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus,.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover {
-         color:#fff;
-         background-color: #0000cc;
-         }
-         /*Boder  shitt of navBar took 1h to find */
-         .navbar-inverse {
-         border-color:  #0000cc;
-         }
-         /* onClick color of each  ACTIVE tab on navBar*/
-         .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
-         color: #fff;
-         background-color:#55ff00;
-         }
-         /*Drop down menu properties */
-         .dropdown-menu>li>a {
-         display: block;
-         padding: 3px 20px;
-         clear: both;
-         font-weight: 400;
-         line-height: 2.4;
-         white-space: nowrap;
-         }
-         /* onClick color of each  open tab on navBar */
-         .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-         color: #fff;
-         background-color: #55ff00;
-         }
-         /*Hover color change to white in tab text - icons*/
-         .navbar-inverse .navbar-nav>li>a:hover {
-         color: #fff;
-         background-color: transparent;
-         } 
-         /*Color of wholw navbar*/
-         #myNavbar1 {
-         background-color:  #0000cc;
-         }
-         /*Color of Text-Icons in Eact Tab*/
-         .navbar-inverse .navbar-nav>li>a {
-         color: #00e673;
-         font-style:bold;
-         font-weight: 600;
-         }
-         .col-sm-1 {
-         position:relative;
-         min-height: 100px;
-         padding-right:15px;
-         padding-left:15px;
-         }
-         .navbar-inverse .navbar-toggle:hover {
-         background-color: #6c38b5;
-         }
-         navbar.less:579
-         .navbar-inverse .navbar-toggle {
-         border-color: #988eaf;
-         }
-         nav-vertical-align.less:7
-         .navbar-toggle {
-         position: relative;
-         float: right;
-         margin-top: 18px;
-         margin-right: 15px;
-         margin-bottom: 8px;
-         background-color: transparent;
-         background-image: none;
-         border: 1px solid transparent;
-         border-radius: 4px;
-         }
-         .navbar-toggle {
-         position: relative;
-         float: right;
-         padding: 9px 10px;
-         margin-top: 18px;
-         margin-right: 15px;
-         margin-bottom: 8px;
-         background-color: transparent;
-         background-image: none;
-         border: 1px solid transparent;
-         border-radius: 4px;
-         }
+       .col-sm-1 {
+ position:relative;
+ min-height: 100px;
+ padding-right:15px;
+ padding-left:15px;
+ }
+         
+       
+
          body {
-         background-color: #00ffff;
+         background-color: #ffffff;
          }
          @media only screen and (max-width: 1025px)
          {
@@ -139,7 +49,7 @@
          @media only screen and (min-width: 766px)
          {
          #home {
-         align-content: center;padding-left: 14px;
+         align-content: center;padding-left: 8px;
          font-size:30px;
          }
          #gi {
@@ -201,24 +111,105 @@
          padding-right:15px;
          padding-left:15px;
          } */
+
+
+ /*DropDown menu change P.S its more than that I am lazy to explain however this comment will remind me of what it is*/
+ .navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus,.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:focus,.navbar-inverse .navbar-nav>.open>a:hover {
+ color:#fff;
+ background-color: #00e6e6;
+ }
+ /*DropDown menu change*/
+ .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus,.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover {
+ color:#4747d1;
+ background-color: #ffffff;
+ }
+ /*Boder  shitt of navBar took 1h to find */
+ .navbar-inverse {
+ border-color:  #ffffff;
+ }
+ /* onClick color of each  ACTIVE tab on navBar*/
+ .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+ color: #fff;
+ background-color:#00e6e6;
+ }
+ /*Drop down menu properties */
+ .dropdown-menu>li>a {
+ display: block;
+ padding: 3px 20px;
+ clear: both;
+ color:#fff;
+ font-weight: 600;
+ line-height: 2.4;
+ white-space: nowrap;
+ }
+ /* onClick color of each  open tab on navBar */
+ .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+ color: #fff;
+ background-color: #00e6e6;
+ }
+ /*Hover color change to white in tab text - icons*/
+ .navbar-inverse .navbar-nav>li>a:hover {
+ color: #76c2ff;
+ background-color: transparent;
+ } 
+ /*Color of wholw navbar*/
+ #myNavbar1 {
+ background-color:  #ffffff;
+ }
+ /*Color of Text-Icons in Eact Tab*/
+ .navbar-inverse .navbar-nav>li>a {
+ color: #4747d1;
+ font-style:bold;
+ font-weight: 600;
+ }
+
+ .navbar-inverse .navbar-toggle:hover {
+ background-color:#0000ff;
+ }
+ navbar.less:579
+ .navbar-inverse .navbar-toggle {
+ border-color: #988eaf;
+ }
+ 
+ .navbar-toggle {
+ position: relative;
+ float: right;
+ margin-top: 18px;
+ margin-right: 15px;
+ margin-bottom: 8px;
+ background-color: #0000FF;
+ background-image: none;
+ border: 1px solid transparent;
+ border-radius: 4px;
+ }
+ 
+  .dropdown-menu {
+ background-color: #22e5db;  ;
+ }
+ nav navbar-nav navbar-right.active {
+ background-color:#00e6e6;
+ }
+ .navbar-btn {
+ margin-top: 15px;
+ margin-bottom: 10px;
+ padding-right: 6px;
+ padding-left: 6px;
+ margin-left: 10px;
+ margin-right:20px;
+ }
+
          /*
          ============================================================================================
          CAUTION>BOOTSTRAP CSS MODIFICATION [END]<CAUION 
          =============================================================================================
          */
-         .dropdown-menu {
-         background-color: #55ff00  ;
-         }
-         nav navbar-nav navbar-right.active {
-         background-color: #55ff00;
-         }
-         .navbar-btn {
-         margin-top: 15px;
-         margin-bottom: 10px;
-         padding-right: 6px;
-         padding-left: 6px;
-         margin-left: 10px;
-         margin-right:20px;
+         .list-group-item {
+         position: relative;
+         display: block;
+         padding: 1px 1px;
+         margin-bottom: -1px;
+         background-color: #3f3;
+         border: 1px solid #3f3;
          }
          .btn-danger {
          color: #fff;
@@ -228,28 +219,29 @@
       </style>
    </head>
    <body>
-      <div class="hi">
-         <div class="container-fluid" style="background-color: #72CEFF">
+
+    <!--  <div class="hi">
+         <div class="container-fluid" style="background-color: #76c2ff">
             <div class="row">
-               <div class="col-sm-1" style="background-color:#72CEFF;">
+               <div class="col-sm-1" style="background-color:#76c2ff;">
                   <img  src="ken_images/iscplogo3.jpg" width="380px" height="105px"  style="margin-left: -39px">
                </div>
-               <div class="col-sm-10" style="background-color:#72CEff;">
+               <div class="col-sm-10" style="background-color:#76c2ff;">
                   <h1 class="cab"></h1>
                </div>
             </div>
          </div>
-      </div>
+      </div> -->
       <nav class="navbar navbar-inverse" id="myNavbar1">
          <div class="container-fluid" style="padding-left: 0px">
-            <div class="navbar-header" style="background-color: #6c38b2;" >
+            <div class="navbar-header" style="background-color: #ffffff;" >
                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>
                <span class="icon-bar"></span>                        
                </button>
-               <a class="navbar-brand" href="#" style="background-color: #6c38b5;margin-bottom: 20px;margin-left: 5px;">
-                  <h1 style="color:  #00e673;margin-top: 2px">ISCP</h1>
+               <a class="navbar-brand" href="#" style="background-color: #ffffff;margin-bottom: 20px;margin-left: 5px;visibility:hidden;">
+                   <img  src="ken_images/logoedit.jpg" width="176" height="82" style="position: absolute;left: 0;top: 0">
                </a>
                <!-- -->
             </div>
@@ -268,14 +260,10 @@
                   <li><a href="#">Page 3</a></li>
                   </ul> -->
                <ul class="nav navbar-nav navbar-right" >
-                  <li class="active"><a  href="#" ><i id="home"  class="fa fa-home" ></i><br>      HOME</a></li>
-                  <li class="dropdown">
-                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca"><i id="gi" class="fa fa-info-circle" ></i><br>      GENERAL INFORMATION</a>
-                     <ul class="dropdown-menu">
-                        <li><a href="#">Page 1-1</a></li>
-                        <li><a href="#">Page 1-2</a></li>
-                        <li><a href="#">Page 1-3</a></li>
-                     </ul>
+                  <li class="active"><a class="dropdown-toggle" href="test1.html" style="padding-right: 20px" ><i id="home"  class="fa fa-home" ></i><br>      HOME</a></li>
+                   <li>
+                     <a class="dropdown-toggle" href="test2.html"><i id="gi" class="fa fa-info-circle" ></i><br>      GENERAL INFORMATION</a>
+                    
                   </li>
                   <li class="dropdown">
                      <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca" ><i id="ac"  class="fa fa-graduation-cap" ></i><br>      ACADMICS</a>
@@ -323,18 +311,18 @@
                   </ul> -->
             </div>
          </div>
-      </nav>
-      <div class="container" id="trialjq" style="overflow: hidden;width: 100% ;background-color:   #00ffff">
+      </nav> <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px;margin-top: -20px" /> 
+      <div class="container" id="trialjq" style="overflow: hidden;width: 100% ;background-color:   #ffffff">
          <div style="float:left; width:10%;"></div>
          <div style="float:right ;;width: 90%;margin-right: 20px">
             <div class="row">
                <div id="column11" class="col-sm-3" style="background-color:#ffb3ff;min-height:200px;margin: 4px;margin-right:20px">
                   <h2 style="position: absolute;bottom: 0;text-align: center;margin-left: 44px;color:  #4747d1;font-family: Courier New;font-weight: 600;margin-right: 10px"> WELCOME TO </h2>
                </div>
-               <div  id="column1" class="col-sm-5" style="background-color:#72CEFF;min-height: 200px;margin: 4px;width: 299px">
+               <div  id="column1" class="col-sm-5" style="background-color:#76c2ff;min-height: 200px;margin: 4px;width: 299px">
                  <div class="hvr-pulse"> <img class = "imageH" src="ken_images/logoiscp.jpg" height="200px" width="250px">
                </div></div>
-               <div id="column11" class="col-sm-3" style="background-color:#00ffff;min-height:200px;margin: 4px;margin-left: 20px"><div class="hvr-pulse">
+               <div id="column11" class="col-sm-3" style="background-color:#ffffff;min-height:250px;margin: 4px;margin-left: 20px"><div class="hvr-pulse">
                   <h2 style="font-size: 24px;font-weight: 900;color: #4d4dff;font-family:Courier New">INSTITUTE</h2>
                   <h2 style="font-size: 24px;font-weight: 900;color: #4d4dff;font-family:Courier New">STUDENT</h2>
                   <h2 style="font-size: 24px;font-weight: 900;color: #4d4dff;font-family:Courier New">COMPANION</h2>
@@ -342,53 +330,15 @@
                </div></div>
             </div>
             <div class="row">
-               <div id="column111" class="col-sm-8" style ="background-color:  #99ccff;min-height: 200px;margin: 5px; border: 1px solid #adbed8 border-radius:2px">
-                  <p style="font-weight:700;text-align: justify;font-style: bold; font-size: 12px; color: #00004d;margin: 10px">There is a self-perpetuating and constant feeling of self improvement in every individual. It is a self-evident fact that our thirst to learn more, has brought us to the doorsteps of IIT Bombay. The institute has established world-class infrastructure and facilities for us to accomplish what we are here for. This calls for better coordination at each and every level of operation.</p>
-                  <p style="font-weight:700;text-align: justify;font-style: bold; font-size: 12px;color: #00004d;margin: 10px">The Student Companion Programme is specifically designed to cater to the needs of PG community of IIT Bombay. The post graduate students in the institute face various issues which are typically non-academic and coalition of academic in nature. These issues need to be addressed; the ISCP provides a platform for the students to get help at formal as well as informal lines. The current scenario, thus, calls for a Post Graduate student-oriented guidance program which addresses their peculiar needs and helps them in becoming sound scientists, engineers and citizens.ISCP is monitored by the Dean AP office. Students are requested to make best use of the resources made available to them by the ISCP.</p>
+               <div id="column111" class="col-sm-8" style ="background-color:  #99ccff;min-height: 330px;margin: 5px; border: 1px solid #adbed8 border-radius:2px">
+                  <p style="font-family:Courier New;font-weight:400;text-align: justify; font-size: 15px; color: #00004d;margin: 10px">There is a self-perpetuating and constant feeling of self improvement in every individual. It is a self-evident fact that our thirst to learn more, has brought us to the doorsteps of IIT Bombay. The institute has established world-class infrastructure and facilities for us to accomplish what we are here for. This calls for better coordination at each and every level of operation.</p>
+                  <p style="font-family:Courier New;font-weight:400;text-align: justify; font-size: 15px;color: #00004d;margin: 10px">The Student Companion Programme is specifically designed to cater to the needs of PG community of IIT Bombay. The post graduate students in the institute face various issues which are typically non-academic and coalition of academic in nature. These issues need to be addressed; the ISCP provides a platform for the students to get help at formal as well as informal lines. The current scenario, thus, calls for a Post Graduate student-oriented guidance program which addresses their peculiar needs and helps them in becoming sound scientists, engineers and citizens.ISCP is monitored by the Dean AP office. Students are requested to make best use of the resources made available to them by the ISCP.</p>
                </div>
-               <div  id="column11" class="col-sm-2" style="background-color: #ffb3ff;min-height: 200px;margin: 5px">
+               <div  id="column1" class="col-sm-2" style="background-color: #ffb3ff;min-height: 330px;margin: 5px">
                   <h2 style="position: absolute;bottom: 0;text-align: center;margin-left: 8px;color:  #4747d1;font-family: Courier New;font-weight: 600"> ABOUT US </h2>
                </div>
             </div>
             <br>
-            <div class="row">
-               <div id="column11" class="col-sm-3" style="min-height: 300px;background-color: #00ff80;margin: 4px;">
-                  <h2 style="position: absolute;bottom:0;text-align: center;margin-left: 35px;color:  #4747d1;font-family: Courier New;font-weight: 600"> QUICK LINKS </h2>
-               </div>
-               <div id="column111" class="col-sm-4" style="min-height: 200px;background-color: #00ffff;margin: 4px;padding-left: 0px;padding-right: 0px;padding-top: 8px">
-                  <div class="list-group">
-                     <a href="http://iitb.ac.in/en/about-iit-bombay" class="list-group-item">
-                        <p class="element">ABOUT IIT-Bombay</p>
-                     </a>
-                     <a href="https://www.facebook.com/groups/1765868867030232/" class="list-group-item">
-                        <p class="element">PG-Fb Group</p>
-                     </a>
-                     <a href="https://gymkhana.iitb.ac.in/~scp/scp/image/iitbmap.jpg" class="list-group-item">
-                        <p class="element">IIT-Bombay Map</p>
-                     </a>
-                     <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/tumtum_routes.pdf" class="list-group-item">
-                        <p class="element">Tum Tum Routes</p>
-                     </a>
-                     <a href="https://play.google.com/store/apps/details?id=in.designlabs.instimap" class="list-group-item">
-                        <p class="element">Institiute Map App</p>
-                     </a>
-                     <a href="https://play.google.com/store/apps/details?id=com.mobond.mindicator" class="list-group-item">
-                        <p class="element">Local Train App</p>
-                     </a>
-                     <a href="http://www.dnaindia.com/mumbai/report_a-companion-for-iit-bombay-pg-students_1423935" class="list-group-item">
-                        <p class="element">News Letter on ISCP in DNA(2010)</p>
-                     </a>
-                     <a href="#" class="list-group-item">
-                        <p class="element">Find Your Mentor</p>
-                     </a>
-                  </div>
-               </div>
-               <div class="col-sm-4"  style="height: 300px;background-color:#00ffff ">
-                  <!-- TEST TEST  TEST TEST -->
-                  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fiitb.iscp%2F%3Fref%3Dbr_rs&tabs=timeline&width=340&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="340" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-                  <!-- TEST TEST  TEST TEST -->
-               </div>
-            </div>
             <div style="margin-top: -10px">
             <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
                <h3 style="font-family: Courier New;color:#001dff;font-weight: 600"> NOTIFICATIONS </h3>
@@ -397,8 +347,8 @@
                <div id="carousel-example" class="carousel slide" data-ride="carousel" style="background-color:#99ccff;margin-left: -15px ">
                   <!-- Wrapper for slides -->
                   <div class="row">
-                     <div class="col-xs-offset-3 col-xs-6">
-                        <div class="carousel-inner">
+                     <div class="col-xs-offset-3 col-xs-6" >
+                        <div class="carousel-inner" style="max-height: 300px">
                            <div class="item active">
                               <div class="carousel-content">
                                  <div>
@@ -446,26 +396,125 @@
                   <span class="glyphicon glyphicon-chevron-right"></span>
                   </a>
                </div>
+            </div> <br>
+<hr style="height:1px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
+            <br>
+
+            <div class="row">
+               <div id="column11" class="col-sm-3" style="min-height: 300px;background-color: #00ff80;margin: 4px;">
+                  <h2 style="position: absolute;bottom:0;text-align: center;margin-left: 35px;color:  #4747d1;font-family: Courier New;font-weight: 600"> QUICK LINKS </h2>
+               </div>
+               <div id="column111" class="col-sm-4" style="min-height: 200px;background-color: #ffffff;margin: 4px;padding-left: 0px;padding-right: 0px;padding-top: 8px">
+                  <div class="list-group">
+                     <a href="http://iitb.ac.in/en/about-iit-bombay" class="list-group-item">
+                        <p class="element">ABOUT IIT-Bombay</p>
+                     </a>
+                     <a href="https://www.facebook.com/groups/1765868867030232/" class="list-group-item">
+                        <p class="element">PG-Fb Group</p>
+                     </a>
+                     <a href="https://gymkhana.iitb.ac.in/~scp/scp/image/iitbmap.jpg" class="list-group-item">
+                        <p class="element">IIT-Bombay Map</p>
+                     </a>
+                     <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/tumtum_routes.pdf" class="list-group-item">
+                        <p class="element">Tum Tum Routes</p>
+                     </a>
+                     <a href="https://play.google.com/store/apps/details?id=in.designlabs.instimap" class="list-group-item">
+                        <p class="element">Institiute Map App</p>
+                     </a>
+                     <a href="https://play.google.com/store/apps/details?id=com.mobond.mindicator" class="list-group-item">
+                        <p class="element">Local Train App</p>
+                     </a>
+                     <a href="http://www.dnaindia.com/mumbai/report_a-companion-for-iit-bombay-pg-students_1423935" class="list-group-item">
+                        <p class="element">News Letter on ISCP in DNA(2010)</p>
+                     </a>
+                     <a href="#" class="list-group-item">
+                        <p class="element">Find Your Mentor</p>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-sm-4"  style="height: 300px;background-color:#ffffff;margin-left: -12px ">
+                  <!-- TEST TEST  TEST TEST -->
+                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fiitb.iscp%2F&tabs=timeline&width=300&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="300" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                  <!-- TEST TEST  TEST TEST -->
+               </div>
             </div>
+    <!--        <div style="margin-top: -10px">
+            <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
+               <h3 style="font-family: Courier New;color:#001dff;font-weight: 600"> NOTIFICATIONS </h3>
+              <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
+
+               <div id="carousel-example" class="carousel slide" data-ride="carousel" style="background-color:#99ccff;margin-left: -15px ">
+                  <!-- Wrapper for slides -->
+        <!--          <div class="row">
+                     <div class="col-xs-offset-3 col-xs-6">
+                        <div class="carousel-inner">
+                           <div class="item active">
+                              <div class="carousel-content">
+                                 <div>
+                                    <h3 style="font-weight: 900">PG New Entrants(Ph.D.,M.Tech.,M.Des., M.Phil., M.Mgt.)</h3>
+                                    <p>Orientation : 14th July, 2016 (Thursday) to 16th July, 2016 (Saturday). (Including Teaching Assistant and R&D/ IRCC Orientation.)
+                                       Reporting and registration: 14th July, 2016 (Thursday) Instructions begin on 18th July, 2016 (Monday)
+                                       For more details see <a href="http://www.iitb.ac.in/newacadhome/toacadcalender.jsp" target="_blank" style="color: #f44242">academic calender </a>.
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <div class="carousel-content">
+                                 <div>
+                                    <h3 style="font-weight: 900">UG New Entrants admitted through JAM (M.Sc. , M.Sc.-PhD) Orientation: 16th July, 2016 (Saturday),17th July, 2016 (Sunday)</h3>
+                                    <p>Reporting and registration: 16th July, 2016 (Saturday) Instructions begin: 18th July, 2016 (Monday)
+                                       For more details see <a href="http://www.iitb.ac.in/newacadhome/toacadcalender.jsp" target="_blank" style="color: #f44242">academic calender </a> .
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <div class="carousel-content">
+                                 <div>
+                                    <h3 style="font-weight: 900">Orientation of new entrants of MTech , MPhil , MSc will be on 14th July , 2016 .</h3>
+                                    <p></p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="item">
+                              <div class="carousel-content">
+                                 <div>
+                                    <h3 style="font-weight: 900"></h3>
+                                    <p>In case you have any problem , you can contact your student companion , department coordinator or overall coordinator . Contact details of overall and department coordinators can be found <a href="https://gymkhana.iitb.ac.in/~scp/scp/index.html#oc" target="_blank" style="color: #f44242">here </a></p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+               </div>
+            </div>  --> 
             <div>
             <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
-               <h3 class="headding">FACULTY COORDINATOR</h3>
+               <h3 class="headding" style="color: #0000ff">FACULTY COORDINATOR</h3>
                <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
             </div>
             <div class="row">
                <div  class="col-sm-4">
                   <div class="container" >
                      <div class="row">
-                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
-                           <div class="card hovercard" style="background-color:  #ffffff">
-                              <div class="cardheader">
+                        <div class="col-lg-3 col-sm-6" style="background-color: #ffffff">
+                           <div class="card hovercard" style="background-color: #99ffff">
+                              <div class="cardheader" style="background-color: #0000ff">
                               </div>
                               <div class="avatar">
                                  <img alt="" src="ken_images/prabhu.jpg">
                               </div>
                               <div class="info">
                                  <div class="title">
-                                    <a target="_blank" href="http://www.iitb.ac.in/en/employee/prof-n-prabhu">N Prabhu</a>
+                                    <a  href="http://www.iitb.ac.in/en/employee/prof-n-prabhu">N PRABHU</a>
                                  </div>
                                  <div class="desc">Faculty Cordinator</div>
                                  <div class="desc"><i class="fa fa-phone-square" aria-hidden="true"></i>&nbsp;0222 576 7624</div>
@@ -495,7 +544,7 @@
             </div>
             <div>
             <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
-               <h3 class="headding">STUDENT COUNSELORS</h3>
+               <h3 class="headding" style="color:#ffff00">STUDENT COUNSELORS</h3>
                <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
                <p class="element">Over and above your friends/ mentors/ faculty (guide), counselling facility is offered by the institute for addressing students' academic and personal issues. Our student counsellors are Mrs. Amita Tagare and Ms. Hima Anaredy.</p>
                <hr style="height:.5px;border:none;color:#333;background-color:#00bfff;margin-left: -10px" />
@@ -504,16 +553,16 @@
                <div  class="col-sm-4">
                   <div class="container">
                      <div class="row">
-                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
-                           <div class="card hovercard" style="background-color:  #ffffff">
-                              <div class="cardheader">
+                        <div class="col-lg-3 col-sm-6" style="background-color: #ffffff">
+                           <div class="card hovercard" style="background-color: #ffffcc">
+                              <div class="cardheader" style="background-color: #ffff00">
                               </div>
                               <div class="avatar">
-                                 <img alt="" src="ken_images/amita.jpg">
+                                 <img alt="" src="ken_images/amita.jpg" style="border: 5px solid  #ffffcc">
                               </div>
                               <div class="info">
                                  <div class="title">
-                                    <a target="_blank" href="#">MRS. AMITA TAGARE</a>
+                                    <a  href="#">MRS. AMITA TAGARE</a>
                                  </div>
                                  <div class="desc">Student Councelor</div>
                                  <div class="desc">
@@ -544,16 +593,16 @@
                <div class="col-sm-4">
                   <div class="container">
                      <div class="row">
-                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
-                           <div class="card hovercard" style="background-color:  #ffffff">
-                              <div class="cardheader">
+                        <div class="col-lg-3 col-sm-6" style="background-color: #ffffff">
+                           <div class="card hovercard" style="background-color: #ffffcc">
+                              <div class="cardheader" style="background-color: #ffff00">
                               </div>
                               <div class="avatar">
-                                 <img alt="" src="ken_images/hima.jpg">
+                                 <img alt="" src="ken_images/hima.jpg" style="border: 5px solid  #ffffcc">
                               </div>
                               <div class="info">
                                  <div class="title">
-                                    <a target="_blank" href="#">MS. HIMA ANAREDY</a>
+                                    <a  href="#">MS. HIMA ANAREDY</a>
                                  </div>
                                  <div class="desc">Student Councelor</div>
                                  <div class="desc">
@@ -584,23 +633,23 @@
             </div>
             <div>
              <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />
-               <h3 class="headding">OVERALL COORDINATOR</h3>
+               <h3 class="headding" style="color: #4dff4d">OVERALL COORDINATOR</h3>
               <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />  
             </div>
             <div class="row">
                <div  class="col-sm-4">
                   <div class="container">
                      <div class="row">
-                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
-                           <div class="card hovercard" style="background-color:  #ffffff">
-                              <div class="cardheader">
+                        <div class="col-lg-3 col-sm-6" style="background-color: #ffffff">
+                           <div class="card hovercard" style="background-color: #ccffcc">
+                              <div class="cardheader" style="background-color: #4dff4d">
                               </div>
                               <div class="avatar">
-                                 <img alt="" src="ken_images/abhilasha1.jpg">
+                                 <img alt="" src="ken_images/abhilasha1.jpg" style="border: 5px solid  #ccffcc">
                               </div>
                               <div class="info">
                                  <div class="title">
-                                    <a target="_blank" href="#">ABHISHA CHAUHAN</a>
+                                    <a  href="#">ABHISHA CHAUHAN</a>
                                  </div>
                                  <div class="desc">AeroSpace (M.Tech)</div>
                                  <div class="desc">
@@ -630,16 +679,16 @@
                <div class="col-sm-4">
                   <div class="container">
                      <div class="row">
-                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
-                           <div class="card hovercard" style="background-color:  #ffffff">
-                              <div class="cardheader">
+                        <div class="col-lg-3 col-sm-6" style="background-color: #ffffff">
+                           <div class="card hovercard" style="background-color: #ccffcc">
+                              <div class="cardheader" style="background-color: #4dff4d">
                               </div>
                               <div class="avatar">
-                                 <img alt="" src="ken_images/das.jpg">
+                                 <img alt="" src="ken_images/das.jpg" style="border: 5px solid  #ccffcc">
                               </div>
                               <div class="info">
                                  <div class="title">
-                                    <a target="_blank" href="#">SANDIPAN DAS</a>
+                                    <a  href="#">SANDIPAN DAS</a>
                                  </div>
                                  <div class="desc">MEMS (M.Tech)</div>
                                  <div class="desc">
@@ -669,16 +718,16 @@
                <div  class="col-sm-4">
                   <div class="container">
                      <div class="row">
-                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
-                           <div class="card hovercard" style="background-color:  #ffffff">
-                              <div class="cardheader">
+                        <div class="col-lg-3 col-sm-6" style="background-color: #ffffff">
+                           <div class="card hovercard" style="background-color:  #ccffcc">
+                              <div class="cardheader" style="background-color: #4dff4d">
                               </div>
                               <div class="avatar">
-                                 <img alt="" src="ken_images/vinay1.jpg">
+                                 <img alt="" src="ken_images/vinay1.jpg" style="border: 5px solid  #ccffcc">
                               </div>
                               <div class="info">
                                  <div class="title">
-                                    <a target="_blank" href="#">VINAY RAI</a>
+                                    <a  href="#">VINAY RAI</a>
                                  </div>
                                  <div class="desc">IEOR (M.Tech.)</div>
                                  <div class="desc">
@@ -713,18 +762,18 @@
                   <div class="container">
                      <div class="row">
                     <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />  
-                        <h3 class="headding">DESIGN NOMINEE</h3>
+                        <h3 class="headding" style="color: #72CEFF">DESIGN NOMINEE</h3>
                      <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />    
-                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
-                           <div class="card hovercard" style="background-color:  #ffffff">
-                              <div class="cardheader">
+                        <div class="col-lg-3 col-sm-6" style="background-color: #ffffff">
+                           <div class="card hovercard" style="background-color:  #ccffff">
+                              <div class="cardheader" style="background-color: #72CEFF">
                               </div>
                               <div class="avatar">
-                                 <img alt="" src="ken_images/tanmy1.jpg">
+                                 <img alt="" src="ken_images/tanmy1.jpg" style=" border: 5px solid #ccffff">
                               </div>
                               <div class="info">
                                  <div class="title">
-                                    <a target="_blank" href="#">TANUMOY KAR</a>
+                                    <a  href="#">TANUMOY KAR</a>
                                  </div>
                                  <div class="desc">MECHANICAL ENG. (M.Tech.)</div>
                                  <div class="desc">
@@ -756,22 +805,22 @@
                      <div class="row">
                     
                          <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />       
-                            <h3 class="headding"> WEB NOMINEE</h3> 
+                            <h3  id="target1" class="headding" style="color: #FF8533"> WEB NOMINEE</h3> 
                          <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px" />  
                       
  
                      
 
-                        <div class="col-lg-3 col-sm-6" style="background-color: #33ffff">
-                           <div class="card hovercard" style="background-color:  #ffffff">
-                              <div class="cardheader">
+                        <div class="col-lg-3 col-sm-6" style="background-color: #ffffff">
+                           <div class="card hovercard" style="background-color: #ffe0cc">
+                              <div class="cardheader" style="background-color: #ff8533">
                               </div>
                               <div class="avatar">
-                                 <img alt="" src="ken_images/el.jpg">
+                                 <img alt="" src="ken_images/images.jpg" style=" border: 5px solid #ffe0cc">
                               </div>
                               <div class="info">
                                  <div class="title">
-                                    <a target="_blank" href="#">AMAN GAUTAM</a>
+                                    <a  href="#">AMAN GAUTAM</a>
                                  </div>
                                  <div class="desc">MECHANICAL ENG. (B.Tech.)</div>
                                  <div class="desc">
@@ -803,6 +852,62 @@
             <br><br><br><br><br>
          </div>
       </div>
+      <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+<!--footer start from here-->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 footerleft ">
+        <div class="logofooter" style="color: #fff;font-family: Courier New;">ISCP </div>
+        <p style="font-family: Courier New"> ISCP provides a platform for the students to get help at formal as well as informal lines.ISCP is monitored by the Dean AP office. Students are requested to make best use of the resources made available to them by the ISCP</p>
+        <p><i class="fa fa-map-pin"></i> IIT Powai , Mumbai -       400076 , INDIA</p>
+        <p><i class="fa fa-phone"></i> Phone (India) : +91 9415 056 043</p>
+        <p><i class="fa fa-envelope"></i> E-mail : amangautam1501@gmail.com</p>
+        
+      </div>
+      <div class="col-md-2 col-sm-6 paddingtop-bottom">
+        <h6 class="heading7" style="color: #fff;font-family: Courier New;">GENERAL LINKS</h6>
+        <ul class="footer-ul">
+          <li><a href="test1.html"> Home</a></li>
+          <li><a href="test2.html"> General Information</a></li>
+          <li><a href="#"> Acadmics</a></li>
+          <li><a href="#"> Extra Curriculars</a></li>
+          <li><a href="#"> Campus Life</a></li>
+          <li><a href="#"> Councelling</a></li>
+          <li><a href="#"> Our Team</a></li>
+        </ul>
+      </div>
+     <div class="col-md-3 col-sm-6 paddingtop-bottom">
+     <h6 class="heading7" style="color: #fff;font-family: Courier New;margin-bottom: 1px">Feed Backs</h6><a style="font-style: 5px;margin-top: -10px" href="https://goo.gl/forms/0FK90d7C5RcZbP6d2">form available here also</a>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe0AqrhfvGYO_Pij-VmJAtBtzrBcbWRhjtSDbfmujOEFTRwRA/viewform?embedded=true" width="300" height="260" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+      </div>
+      <div class="col-md-3 col-sm-6 paddingtop-bottom">
+        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <div style="margin-left: 40px" class="fb-xfbml-parse-ignore">
+            <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/iitb.iscp/">Facebook</a></blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--footer start from here-->
+
+<div class="copyright">
+  <div class="container">
+    <div class="col-md-6">
+      <p>© 2017 - Designed by <a href="test1.html#target1">Web/Design Nominee</a></p>
+    </div>
+    <div class="col-md-6">
+      <ul class="bottom_ul">
+        <li><a href="test1.html#target2">About us</a></li>
+        <li><a href="test2.html">Faq's</a></li>
+        <li><a href="#">Contact us</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</div>
       <script>
          setCarouselHeight('#carousel-example');
          
