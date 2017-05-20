@@ -215,22 +215,22 @@ margin-left: -14px;margin-top: 10px;margin-bottom: 8px
 
 	@-webkit-keyframes hvr-pulse {
   25% {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
   }
   75% {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
+    -webkit-transform: scale(0.99);
+    transform: scale(0.99);
   }
 }
 @keyframes hvr-pulse {
   25% {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
   }
   75% {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
+    -webkit-transform: scale(0.99);
+    transform: scale(0.99);
   }
 }
 
@@ -273,8 +273,8 @@ margin-left: -14px;margin-top: 10px;margin-bottom: 8px
 }
 #column111:hover, #column111:focus, #column111:active {
      
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
 
 } 
 .element {
@@ -296,7 +296,13 @@ margin-left: -14px;margin-top: 10px;margin-bottom: 8px
     display:flex;
     align-items:center;
     margin-bottom: 13px;
-} /*
+} 
+
+.verticalLine {
+  border-right: thick solid #0000ff;
+ 
+}
+/*
 #column1 {
   display: inline-block;
   vertical-align: middle;
@@ -745,3 +751,42 @@ footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', s
  .bottom_ul li { float:left; line-height:40px;}
  .bottom_ul li:after { content:"/"; color:#FFF; margin-right:8px; margin-left:8px;}
  .bottom_ul li a { color:#FFF;  font-size:12px;}
+
+
+ @keyframes rotate_icon {
+
+  0% {transform: rotateZ(0deg);}
+  10% {transform: rotateZ(9deg);}
+  20% {transform: rotateZ(18deg);}
+  30% {transform: rotateZ(27deg);}
+  40% {transform: rotateZ(36deg);}
+  50% {transform: rotateZ(45deg);}
+  60% {transform: rotateZ(54deg);}
+  70% {transform: rotateZ(63deg);}
+  80% {transform: rotateZ(72deg);}
+  90% {transform: rotateZ(81deg);}
+  100% {transform: rotateZ(90deg);}
+ }
+
+ @-webkit-keyframes rotate_icon {
+
+  0% {transform: rotateZ(0deg);}
+  10% {transform: rotateZ(9deg);}
+  20% {transform: rotateZ(18deg);}
+  30% {transform: rotateZ(27deg);}
+  40% {transform: rotateZ(36deg);}
+  50% {transform: rotateZ(45deg);}
+  60% {transform: rotateZ(54deg);}
+  70% {transform: rotateZ(63deg);}
+  80% {transform: rotateZ(72deg);}
+  90% {transform: rotateZ(81deg);}
+  100% {transform: rotateZ(90deg);}
+ }
+
+.rtr {
+
+      -webkit-animation: rotate_icon ;
+    animation: rotate_icon ;
+    animation-fill-mode: forwards;
+     -webkit-animation-fill-mode: forwards;
+}
