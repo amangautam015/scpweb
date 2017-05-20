@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>ISCP</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/ken_css.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <style>
+         .button {
+         border: 1px solid #403118;
+         background: #3e899c;
+         background: -webkit-gradient(linear, left top, left bottom, from(#e37520), to(#3e899c));
+         background: -webkit-linear-gradient(top, #e37520, #3e899c);
+         background: -moz-linear-gradient(top, #e37520, #3e899c);
+         background: -ms-linear-gradient(top, #e37520, #3e899c);
+         background: -o-linear-gradient(top, #e37520, #3e899c);
+         background-image: -ms-linear-gradient(top, #e37520 0%, #3e899c 100%);
+         padding: 10.5px 21px;
+         -webkit-border-radius: 6px;
+         -moz-border-radius: 6px;
+         border-radius: 6px;
+         -webkit-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+         -moz-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+         box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+         text-shadow: #7ea4bd 0 1px 0;
+         color: #ffffff;
+         font-size: 14px;
+         font-family: helvetica, serif;
+         text-decoration: none;
+         vertical-align: middle;
+         }
+         .button:hover {
+         border: 1px solid #0a3c59;
+         text-shadow: #f0f9ff 0 1px 0;
+         background: #3e779d;
+         background: -webkit-gradient(linear, left top, left bottom, from(#ff8c00), to(#3e779d));
+         background: -webkit-linear-gradient(top, #ff8c00, #3e779d);
+         background: -moz-linear-gradient(top, #ff8c00, #3e779d);
+         background: -ms-linear-gradient(top, #ff8c00, #3e779d);
+         background: -o-linear-gradient(top, #ff8c00, #3e779d);
+         background-image: -ms-linear-gradient(top, #ff8c00 0%, #3e779d 100%);
+         color: #fff;
+         }
+         .button:active {
+         text-shadow: #1e4158 0 1px 0;
+         border: 1px solid #0a3c59;
+         background: #65a9d7;
+         background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#3e779d));
+         background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+         background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+         background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+         background: -o-linear-gradient(top, #3e779d, #65a9d7);
+         background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+         color: #fff;
+         }
+         .col-sm-1 {
+         position:relative;
+         min-height: 100px;
+         padding-right:15px;
+         padding-left:15px;
+         }
+         .list-group-item {
+         display: inline-block;
+         vertical-align: middle;
+         -webkit-transform: perspective(1px) translateZ(0);
+         transform: perspective(1px) translateZ(0);
+         box-shadow: 0 0 1px transparent;
+         -webkit-transition-duration: 0.7s;
+         transition-duration: 0.7s;
+         }
+         .list-group-item:hover, .list-group-item:focus, .list-group-item:active {
+         -webkit-transform: scale(1.01);
+         transform: scale(1.01);
+         -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+         transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+         }
+         body {
+         background-color: #ffffff;
+         }
+         @media only screen and (max-width: 1025px)
+         {
+         .hi { 
+         display:none;
+         }
+         }
+         @media only screen and (max-width: 799px)
+         {
+         #useless {
+         display: none;
+         }
+         #column1 {
+         display: none;
+         }
+         .imageH { 
+         display:none;
+         }
+         #columnF {
+         display: none;
+         }
+         }
+         @media only screen and (min-width: 766px)
+         {
+         #home {
+         align-content: center;padding-left: 8px;
+         font-size:30px;
+         }
+         #gi {
+         align-content: center;padding-left: 70px;
+         font-size:30px;
+         }
+         #ac {
+         align-content: center;padding-left: 29px; 
+         font-size:28px;
+         }
+         #ec {
+         align-content: center;padding-left: 66px; 
+         font-size: 30px;
+         }
+         #cl {
+         align-content: center;padding-left: 32px;  
+         padding-bottom: 5px;  font-size: 25px;
+         }
+         #cc {
+         align-content: center;padding-left: 37px;
+         padding-bottom: 5px;  font-size: 25px;
+         }
+         #it {
+         align-content: center;padding-left: 30px;
+         padding-bottom: 5px ;font-size: 25px
+         }
+         }
+         @media only screen and (max-width: 766px)
+         {
+         #home {
+         font-size:30px;
+         }
+         #gi {
+         font-size:30px;
+         }
+         #ac {
+         font-size:28px;
+         }
+         #ec {
+         font-size: 30px;
+         }
+         #cl {
+         padding-bottom: 5px;  font-size: 25px;
+         }
+         #cc {
+         padding-bottom: 5px;  font-size: 25px;
+         }
+         #it {
+         padding-bottom: 5px ;font-size: 25px
+         }
+         }
+         /*
+         COLUMN MANAGEMENT
+         =======================================================================================
+         */
+         /*.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
+         position:relative;
+         min-height:300px;
+         padding-right:15px;
+         padding-left:15px;
+         } */
+         /*DropDown menu change P.S its more than that I am lazy to explain however this comment will remind me of what it is*/
+         .navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus,.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:focus,.navbar-inverse .navbar-nav>.open>a:hover {
+         color:#fff;
+         background-color: #ff6600;
+         }
+         /*DropDown menu change*/
+         .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus,.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover {
+         color:#ff6600;
+         background-color: #ffffff;
+         }
+         /*Boder  shitt of navBar took 1h to find */
+         .navbar-inverse {
+         border-color:  #ffffff;
+         }
+         /* onClick color of each  ACTIVE tab on navBar*/
+         .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+         color: #fff;
+         background-color:#ff6600;
+         }
+         /*Drop down menu properties */
+         .dropdown-menu>li>a {
+         display: block;
+         padding: 3px 20px;
+         clear: both;
+         color:#fff;
+         font-weight: 600;
+         line-height: 2.4;
+         white-space: nowrap;
+         }
+         /* onClick color of each  open tab on navBar */
+         .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+         color: #fff;
+         background-color: #ff6600;
+         }
+         /*Hover color change to white in tab text - icons*/
+         .navbar-inverse .navbar-nav>li>a:hover {
+         color: #ff6600;
+         background-color: transparent;
+         } 
+         /*Color of wholw navbar*/
+         #myNavbar1 {
+         background-color:  #ffffff;
+         }
+         /*Color of Text-Icons in Eact Tab*/
+         .navbar-inverse .navbar-nav>li>a {
+         color: #ff6600;
+         font-style:bold;
+         font-weight: 600;
+         }
+         .navbar-inverse .navbar-toggle:hover {
+         background-color:#ff6600;
+         }
+         navbar.less:579
+         .navbar-inverse .navbar-toggle {
+         border-color: #988eaf;
+         }
+         .navbar-toggle {
+         position: relative;
+         float: right;
+         margin-top: 18px;
+         margin-right: 15px;
+         margin-bottom: 8px;
+         background-color: #ff6600;
+         background-image: none;
+         border: 1px solid transparent;
+         border-radius: 4px;
+         }
+         .dropdown-menu {
+         background-color: #ffb380;  ;
+         }
+         nav navbar-nav navbar-right.active {
+         background-color:#ff6600;
+         }
+         .navbar-btn {
+         margin-top: 15px;
+         margin-bottom: 10px;
+         padding-right: 6px;
+         padding-left: 6px;
+         margin-left: 10px;
+         margin-right:20px;
+         }
+         /*
+         ============================================================================================
+         CAUTION>BOOTSTRAP CSS MODIFICATION [END]<CAUION 
+         =============================================================================================
+         */
+         .list-group-item {
+         position: relative;
+         display: block;
+         font-family: Courier New;
+         padding: 2px 2px;
+         background-color:#ff6600;
+         border: 5px solid #ffc299;
+         }
+         a.list-group-item:focus,a.list-group-item:hover,button.list-group-item:focus,button.list-group-item:hover {
+         color:#fff;
+         text-decoration:none;
+         background-color:#ff0000;
+         }
+         .btn-danger {
+         color: #fff;
+         background-color: #a6ff4d;
+         border-color: #a6ff4d;
+         }
+         .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+         color: #ff6600;
+         cursor: default;
+         background-color:#ffc299;
+         border: 1px solid #ddd;
+         border-bottom-color: transparent;
+         }
+         a.panel_he{
+            
+            color: #fff;
+            font-weight: 900;
+            text-orientation: none;
+
+         }
+         
+        
+          .panel-body {
+
+            background-color: #ffe6b3;
+color: #ff6600;
+font-weight: 400;
+            font-family: Courier New;
+         }
+         .panel-title {
+            font-family: Courier New;
+            font-weight: 500;
+         }
+         ul.back>li{
+
+  margin: 10px 0;
+
+         }
+      </style>
+   </head>
+   <body>
+      <!--  <div class="hi">
+         <div class="container-fluid" style="background-color: #76c2ff">
+            <div class="row">
+               <div class="col-sm-1" style="background-color:#76c2ff;">
+                  "verticalLine m>g  src="ken_images/iscplogo3.jpg" width="380px" height="105px"  style="margin-left: -39px">
+               </div>
+               <div class="col-sm-10" style="background-color:#76c2ff;">
+                  <h1 class="cab"></h1>
+               </div>
+            </div>
+         </div>
+         </div> -->
+      <nav class="navbar navbar-inverse" id="myNavbar1">
+         <div class="container-fluid" style="padding-left: 0px">
+            <div class="navbar-header" style="background-color: #ffffff;" >
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>                        
+               </button>
+               <a class="navbar-brand" href="#" style="background-color: #ffffff;margin-bottom: 20px;margin-left: 5px;visibility:hidden;">
+               <img  src="ken_images/logoedit.jpg" width="176" height="82" style="position: absolute;left: 0;top: 0">
+               </a>
+               <!-- -->
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar" >
+               <!-- <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="">Page 1-1</a></li>
+                      <li><a href="#">Page 1-2</a></li>
+                      <li><a href="#">Page 1-3</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Page 2</a></li>
+                  <li><a href="#">Page 3</a></li>
+                  </ul> -->
+               <ul class="nav navbar-nav navbar-right" >
+                  <li ><a class="dropdown-toggle" href="test1.html" style="padding-right: 20px" ><i id="home"  class="fa fa-home" ></i><br>      HOME</a></li>
+                  <li>
+                     <a class="dropdown-toggle" href="test2.html"><i id="gi" class="fa fa-info-circle" ></i><br>      GENERAL INFORMATION</a>
+                  </li>
+                  <li class="dropdown active">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca" ><i id="ac"  class="fa fa-graduation-cap" ></i><br>      ACADMICS</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="test31.html">Departments</a></li>
+                        <li><a href="test32.html">OCWs</a></li>
+                        <li><a href="test33.html">HandBooks</a></li>
+                        <li><a href="test34.html">Dissertation Topics</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca"><i id="ec" class="fa fa-trophy"></i><br>      EXTRA CURRICULARS</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca"><i id="cl"  class="fa fa-bicycle" ></i> <br>    CAMPUS LIFE</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca"><i id="cc"  class="fa fa-life-ring" ></i> <br>     COUNSELLING</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                     </ul>
+                  </li>
+                   <li>
+                     <a class="dropdown-toggle" href="test4.html"><i id="it" class="fa fa-info-circle" ></i><br>    ISCP TEAM</a>
+                 </li>
+               </ul>
+               <!-- <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#" id="bca"><i class="fa fa-external-link-square" style="align-content: center;padding-left: 12px" ></i><br>Login</a></li>
+                  </ul> -->
+            </div>
+         </div>
+      </nav>
+      <hr style="height:2px;border:none;color:#333;background-color:#ff6600;margin-left: -10px;margin-top: -20px" />
+      <div class="container" style="overflow:hidden;">
+         <div class="container" style="background-color: #ffccb3;margin-left: -6px;border-radius:13px">
+            <h2 style="font-family: Courier New;color: #ff6600;margin-top: 20px;margin-bottom: -15px" ><strong>ACADMICS</strong></h2>
+            <hr style="height:2px;border:none;color:#333;background-color:#ff6600;margin-left: -10px;" />
+         </div>
+         <br>
+         <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#homee" style="font-family: Courier New;font-weight: 600">DEPARTMENT</a></li>
+            <li><a data-toggle="tab" href="#menu1" style="font-family: Courier New;font-weight: 600;">OCWs</a></li>
+            <li><a data-toggle="tab" href="#menu2" style="font-family: Courier New;font-weight: 600">HANDBOOKS</a></li>
+            <li><a data-toggle="tab" href="#menu3" style="font-family: Courier New;font-weight: 600">DISSERTATION TOPICS</a></li>
+         </ul>
+         <div class="tab-content" style="background-color: #ffc299;">
+            <br>
+            <div id="homee" class="tab-pane fade in active">
+               <!-- DEPARTMENTS START -->
+               <div class="container" style="background-color: #ffc299;border-radius: 20px; -webkit-transform: scaleX(0.90);
+                  transform: scaleX(0.90);margin-left: -10px">
+                  <div class="row">
+                     <div class="col-sm-6" style="margin-left: -5px" >
+                        <h2 style="border-bottom: 3px solid #ff6600 ;font-weight: 900;font-family: Courier New;color: #fff;">DEPARTMENTS</h2>
+                        <div class="list-group" style="background-color: #ffc299">
+                           <a target="_blank" href="https://www.aero.iitb.ac.in/home/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Aerospace Engineering&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                           <a target="_blank" href="http://www.bio.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Biosciences and Bioengineering&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                           <a target="_blank" href="http://www.che.iitb.ac.in/online/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Chemical Engineering&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                           <a target="_blank" href="http://www.chem.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Chemistry&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                           <a target="_blank" href="http://www.civil.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Civil Engineering&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                           <a target="_blank" href="https://www.cse.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Computer Science & Engineering&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                           <a target="_blank" href="http://www.geos.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Earth Sciences&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                           <a target="_blank" href="https://www.ee.iitb.ac.in/web" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Electrical Engineering&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                           <a target="_blank" href="http://www.ese.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Energy Science and Engineering&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                           <a target="_blank" href="http://www.hss.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Humanities & Social Science&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                           <a target="_blank" href="http://www.idc.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Industrial Design Centre&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                           <a target="_blank" href="http://www.math.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Mathematics&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                           <a target="_blank" href="http://www.me.iitb.ac.in/home/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Mechanical Engineering&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                           <a target="_blank" href="http://www.iitb.ac.in/mems/en" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Metallurgical Engineering & Materials Science&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                           <a target="_blank" href="http://www.phy.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Physics&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                        </div>
+                     </div>
+                     <div class="col-sm-6" style="margin-left: -5px">
+                        <h2 style="border-bottom: 3px solid #ff6600;font-weight: 900;font-family: Courier New;color: #fff;">CENTRES</h2>
+                        <div class="list-group" style="background-color: #ffc299">
+                           <a target="_blank" href="http://asc.iitb.ac.in/acadmenu/index.jsp" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Application Software Centre (ASC)&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                           <a target="_blank" href="http://www1.iitb.ac.in/~crnts/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Centre for Research in Nanotechnology and Science (CRNTS)&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                           <a target="_blank" href="http://www.casde.iitb.ac.in/aboutus/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Centre for Aerospace Systems Design and Engineering&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i>  </a>
+                           <a target="_blank" href="http://www.cc.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Computer Centre (CC)&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i>
+                           </a>
+                           <a target="_blank" href="http://www.cdeep.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Centre for Distance Engineering Education Programme (CDEEP)&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i> </a>
+                           <a target="_blank" href="http://www.cese.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Centre for Environmental Science and Engineering (CESE)&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                           <a target="_blank" href="http://www.csre.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Centre of Studies in Resources Engineering (CSRE)&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i>
+                           </a>
+                           <a target="_blank" href="http://www.ctara.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Centre for Technology Alternatives for Rural Areas (CTARA)&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i>
+                           </a>
+                           <a target="_blank" href="http://www.cfdvs.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Centre for Formal Design and Verification of Software (CFDVS)&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i>
+                           </a>
+                           <a target="_blank" href="http://cuse.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Centre for Urban Science and Engineering (C-USE)&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i>
+                           </a>
+                           <a target="_blank" href="http://www.ieor.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Industrial Engineering and Operations Research (IEOR)&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                           <a target="_blank" href="http://www.ncair.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;National Centre for Aerospace Innovation and Research (NCAIR)&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i>
+                           </a>
+                           <a target="_blank" href="http://www.ncmath.org/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;National Centre for Mathematics (NCM)&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i>
+                           </a>
+                           <a target="_blank" href="http://www.sc.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Systems and Control Engineering&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                           <a target="_blank" href="http://www.tatacentre.iitb.ac.in/" class="list-group-item" style="color: #fff;"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;
+                           Tata Center for Technology and Design (TCTD)&nbsp;<i class="fa fa-external-link" aria-hidden="true"></i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- DEPARTMENT ENDS   -->
+            </div>
+            <div id="menu1" class="tab-pane fade">
+               <div class="container" style="overflow:hidden;">
+                  <h2 style="font-weight: 900;font-family: Courier New;color: #fff;">ONLINE COURSE RESOURCES</h2>
+                  <hr style="height:2px;border:none;color:#333;background-color:#ff6600;margin-right:30px;margin-top: -10px" />
+                  <p style="font-family: Courier New;color: #b34700;margin-right:30px;text-align: justify;"><strong>Open Course Ware (OCW) </strong>database has been prepared and manged by senior master's students. They have provided links to useful resources like lecture notes and videos which they feel might help the juniors to handle the courses. As the database will be updated continuously this will always be a work in progress. Please make full use of the opportunity and provide feedback to us about this initiative.<br>
+                     <strong>To Seniors</strong> - If you'd like to help us in this initiative (either as co-contributor to following subjects or if you want to handle a new subject) please drop a mail to <i style="color: #000">amangautam1501@gmail.com Or +91 704 580 0502.</i><br>
+                     <strong>To All</strong>  - If you want to us to cover some subject which is not in the list please contact at the mail ids given above.
+                  </p><br><p style="font-size: 10px"><strong>Note:</strong>Below are OCWs of all department . <span style="color:blue">Blue</span> color text are links to material. </p><br><br><br><br>
+                  <!--  OCWs material STARTS HERE   -->
+               
+                  <div class="panel-group" id="accordion" style="margin-right: 30px">
+                     <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color:  #ff6600">
+                           <h4 class="panel-title">
+                              <a style="text-decoration: none;" class="panel_he" data-toggle="collapse" data-parent="accordion" href="#collapse1"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Aerospace Engineering</a>
+                           </h4>
+                        </div>
+                        <div id="collapse1" class="panel-collapse collapse in">
+                           <div class="panel-body">
+                           <h3 style="color: #000;font-weight: 900">Courses</h3>
+                            <ul class="back">
+                              <li><a data-toggle="modal" data-target="#myModal1">AE 624 - Hypersonic Flow Theory</a></li>
+                              <li><a data-toggle="modal" data-target="#myModal2">AE 651 - Aerodynamics Of Compressors and Turbines</a></li>
+                              <li><a data-toggle="modal" data-target="#myModal3">AE 658 - Design For Powerplant Of Aircraft</a></li>
+                              <li><a href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-695-State%20Space%20Methods%20for%20Flight%20Vehicles/Reading%20Material.docx">AE 695 - State Space Methods For Flight Vehicles </a>: Links to reading material.</li>
+                              <li><a href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20713%20-%20Space%20Flight%20Dynamics/Lectures/Lectures.zip">AE 713 - Space Flight Dynamics </a>Lecture Notes</li>
+                              <li><a href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-%20714%20-%20Aircraft%20Design/notes.zip">AE 714 - Aircraft Design </a>Lecture notes and tutorial</li>
+                              <li><a data-toggle="modal" data-target="#myModal44">AE 717 - Aircraft Flight Dynamics</a></li>
+                              <li><a data-toggle="modal" data-target="#myModal5">AE 722 - Computing Of High Speed Flow</a></li>
+                              <li><a href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/ME%20724%20-%20%20Essentials%20of%20Turbulence/lecture.zip">ME 724 - Essentials Of Turbulence </a>: Lecture notes and tutorial.</li>
+                              <li><a href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/Philosophy%20of%20Education/lecture.zip">Philosophy Of Education </a>:Notes</li>
+                            </ul>  
+                          <!--MODELS START!!!!!!!!!! -->
+                           <!-- Modal1 -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">AE 624: Hypersonic Flow Theory</h4>
+        </div>
+        <div class="modal-body">
+        <h4>Content</h4><h5>Text in <span style="color: blue">blue are download links</span> to PDFs and images of course material</h5>
+         <hr style="height:2px;border:none;color:#333;background-color:#ff6600" />
+           <ul class="back">
+                  <li>Class of 11/2/2016 files
+                     <ul>
+                       <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/Class%20of%2011Feb2016%20files/6%20End%20reflections.jpg">Six end reflections</a></li>
+                       <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/Class%20of%2011Feb2016%20files/shocktube%20x-t%20diagram.png">Shocktube x-t diagram</a></li>
+                        <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/Class%20of%2011Feb2016%20files/Signal%201.tif">Signal 1</a></li>
+                        <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/Class%20of%2011Feb2016%20files/Signal%202.jpg">Signal 2</a></li>
+                        <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/Class%20of%2011Feb2016%20files/Signal%203.jpg">Signal 3</a></li>
+                        <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/Class%20of%2011Feb2016%20files/Tunnel%20schema.jpg">Tunnel Schema</a></li>
+                     </ul>
+                  </li>
+                  <li>Notes and Tutorials of Newtonian and Test facilities
+                     <ul>
+                          <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/Notes%20and%20Tutorials-Newtonian%20and%20Test%20facilities/Acoustic%20impedance%20_%20problems.pdf">Acoustic impedance problems</a></li>
+                          <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/Notes%20and%20Tutorials-Newtonian%20and%20Test%20facilities/Gas%20tables.pdf">Gas tables</a></li>
+                          <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/Notes%20and%20Tutorials-Newtonian%20and%20Test%20facilities/Shock%20tube%20problem(solved).pdf">Shock tube problem(solved)</a></li>
+
+                     </ul>
+                  </li>
+                  <li>Tutorials
+                     <ul>
+                         <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/Tutorials/Tutorial%201.pdf">Tutorial 1</a></li>
+                         <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/Tutorials/Tutorial%202.pdf">Tutorial 2</a></li>
+                         <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/Tutorials/Tutorial%203.pdf">Tutorial 3</a></li>
+                         <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/Tutorials/Tutorial%205.pdf">Tutorial 5</a></li>
+                         
+
+                     </ul>
+                     
+
+
+                  </li> 
+                   <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/AE%20624%20Hypersonic%20expansion%20relations%2011Jan2016.pdf">Hypersonic expansion relations-I</a></li>
+                   <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/AE%20624%20Hypersonic%20shock%20relations%207Jan2016.pdf">Hypersonic shock relations-II</a></li>
+                   <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/AE%20624%20numarics.pdf">Numerical problems</a></li>
+                   <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/Hypersonic%20and%20high-temperature%20gas%20dynamics%20-%20John%20David%20Anderson.pdf">Hypersonic and high-temperature gas dynamics</a></li>
+                   <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20624%20-%20Hypersonic%20flow%20theory/Hypersonic%20test%20facilities.pdf">Hypersonic test facilities</a></li>
+
+                              
+          </ul> 
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Model2-->
+    <!-- Modal -->
+  <div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">AE 651 - Aerodynamics Of Compressors and Turbines</h4>
+        </div>
+        <div class="modal-body">
+         <h4>Content</h4><h5>Text in <span style="color: blue">blue are download links</span> to PDFs and images of course material</h5>
+          <hr style="height:2px;border:none;color:#333;background-color:#ff6600;" />
+         <ul>
+           <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Project/Project.zip">Project</a></li>
+           <li>Secondary flow pdfs
+              <ul>
+                 <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Sec.%20Flow/Secondary_flow_Hawthorne.pdf">Secondary flow by Hawthorne</a></li>
+                 <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Sec.%20Flow/Secondary_flow_Horlock.pdf">Secondary flow by Horlock</a></li>
+                 <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Sec.%20Flow/Secondary_flow_Langston.pdf">Secondary flow by Langston</a></li>
+                 <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Sec.%20Flow/Tip_leakage_Storer_Cumpsty.pdf">Tip leakage</a></li>
+
+              </ul>
+              
+
+           </li>
+           <li>Lectures
+               <ul>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec1.pdf">Lecture 1</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec2.pdf">Lecture 2</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec3.pdf">Lecture 3</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec4.pdf">Lecture 4</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec5.pdf">Lecture 5</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec6.pdf">Lecture 6</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec7.pdf">Lecture 7</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec8.pdf">Lecture 8</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec9.pdf">Lecture 9</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec10.pdf">Lecture 10</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec11.pdf">Lecture 11</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec12.pdf">Lecture 12</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec13.pdf">Lecture 13</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec14.pdf">Lecture 14</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec15.pdf">Lecture 15</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec16.pdf">Lecture 16</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec17.pdf">Lecture 17</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec18.pdf">Lecture 18</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec19.pdf">Lecture 19</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec20.pdf">Lecture 20</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec21.pdf">Lecture 21</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec22.pdf">Lecture 22</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec23.pdf">Lecture 23</a></li>
+                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Lec24.pdf">Lecture 24</a></li>
+
+               </ul>
+              
+
+           </li>
+           <li>Tutorials
+                 <ul>
+                    <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/tut1.pdf">Tutorial 1</a></li>
+                    <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/tut2.pdf">Tutorial 2</a></li>
+                    <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/tut3.pdf">Turorial 3</a></li>
+                    <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Solved_problem_radial_turbine.pdf">Radial turbine tutorial</a></li>
+
+
+
+                 </ul>
+
+
+           </li>
+            <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Mid_sem2015_solutions_2.pdf">Midsem-2015 solutions</a></li>
+             <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/radial_equilibrium.pdf">Radial equilibrium</a></li>
+           <li>Quiz 2015
+              <ul>
+                 <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Quiz1_2015_sol.pdf">Quiz 1 Solution</a></li>
+                 <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-651%20-%20Aerodynamics%20of%20Compressors%20and%20Turbines/Quiz2_2015_sol.pdf">Quiz 2 Solution</a></li>
+
+              </ul>
+
+           </li>
+
+
+         </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal -->
+  <div class="modal fade" id="myModal3" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">AE 658: Design for Power Plant of Aircraft</h4>
+        </div>
+        <div class="modal-body">
+           <h4>Content</h4><h5>Text in <span style="color: blue">blue are download links</span> to PDFs and images of course material</h5> <hr style="height:2px;border:none;color:#333;background-color:#ff6600" />
+           <ul>
+              <li><a href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-658%20-%20Design%20for%20Power%20Plant%20of%20Aircraft/Lecture/Lecture.zip">Lecture</a></li>
+              <li><a href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-658%20-%20Design%20for%20Power%20Plant%20of%20Aircraft/Project%202/Project%202.zip">Project 2</a></li>
+              <li><a href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-658%20-%20Design%20for%20Power%20Plant%20of%20Aircraft/Project%203/Project%203.zip">Project 3</a></li>
+
+           </ul>
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal44" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">AE 717: Aircraft flight dynamics</h4>
+        </div>
+        <div class="modal-body">
+           <h4>Content</h4><h5>Text in <span style="color: blue">blue are download links</span> to PDFs and images of course material</h5> <hr style="height:2px;border:none;color:#333;background-color:#ff6600" />
+           <ul>
+             <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-717-Aircraft%20flight%20dynamics/[Michael_V._Cook]_Flight_Dynamics_Principles.pdf">Flight Dynamics Principles Book</a></li>
+             <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE-717-Aircraft%20flight%20dynamics/Reading%20Material.docx">Reading Material</a></li>
+          </ul>
+         
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--dfdf-->
+      <!-- Modal -->
+  <div class="modal fade" id="myModal5" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">AE 722: Computing of high speed flow</h4>
+        </div>
+        <div class="modal-body">
+          <h4>Content</h4><h5>Text in <span style="color: blue">blue are download links</span> to PDFs and images of course material</h5> <hr style="height:2px;border:none;color:#333;background-color:#ff6600" />
+          <ul>
+             <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20-722Computing%20of%20high%20speed%20flow/lecture.zip">Lectures</a></li>
+             <li>Reading assignments
+             <ul>
+                <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20-722Computing%20of%20high%20speed%20flow/Reading%20Assignment.zip">Reading asignment 1</a></li>
+                <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/aerospace/AE%20-722Computing%20of%20high%20speed%20flow/AE622_ReadingAssignment.zip">Reading asignment 2</a></li>
+
+             </ul>
+               </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" style="width: auto;">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+                          <!--MODELS END  !!!!!!!!!! -->
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color:  #ff6600">
+                           <h4 class="panel-title">
+                              <a style="text-decoration: none;" class="panel_he" data-toggle="collapse" data-parent="accordion" href="#collapse2"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Bioscience & Bioengineering</a>
+                           </h4>
+                        </div>
+                        <div id="collapse2" class="panel-collapse collapse">
+                           <div class="panel-body">
+                            <h3 style="color: #000;font-weight: 900">Courses</h3>
+                           <ul class="back">
+                              <li>Microfluidics
+                                 <ul>
+                                    <li><a target="_blank" href="http://isites.harvard.edu/fs/docs/icb.topic507763.files/Lecture_12_Microfluidics_Principles.pdf">Microfluidics principles</a></li>
+                                    <li><a target="_blank" href="http://www.princeton.edu/prism/microfluidics/training/boot-camp/2013_Materials/bootcamp0_8_0.pdf">Microfluidics bootcamp</a></li>
+                                    <li><a target="_blank" href="http://nptel.ac.in/courses/112106169/">NPTEL course</a></li>
+                                    <li><a target="_blank" href="http://www.mf20.org/">Microfluidics 2.0</a></li>
+                                 </ul>
+                              </li>
+                              <li>Basic Biology (for engineers)
+                                 <ul>
+                                    <li><a target="_blank" href="http://nptel.ac.in/courses/122103039/">NPTEL course</a></li>
+                                    <li><a target="_blank" href="http://people.eku.edu/ritchisong/301notes2.htm">Neurons & the Nervous System</a></li>
+
+                                 </ul>
+                                 
+                              </li>
+                               <li>Cellular electricity
+                                 <ul>
+                                    <li><a target="_blank" href="https://www.coursera.org/learn/systems-biology/lecture/h3Oxz/electrical-activity-in-cell-biology">Electrical activity in cell biology</a></li>
+                                    
+
+                                 </ul>
+                                 
+                              </li>
+
+
+                           </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color:  #ff6600">
+                           <h4 class="panel-title">
+                              <a style="text-decoration: none;" class="panel_he" data-toggle="collapse" data-parent="accordion" href="#collapse3"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Chemical Engineering</a>
+                           </h4>
+                        </div>
+                        <div id="collapse3" class="panel-collapse collapse">
+                           <div class="panel-body">
+                            <h3 style="color: #000;font-weight: 900">Courses</h3>
+                           <ul class="back">
+                             <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/chemical/cl%20601%20advance%20transport%20phenomena/transport%20phenomena.zip">CL 601 - advance transport phenomena </a>: Transport phenomena book and solutions</li>
+                              <li><a target="_blank" href="http://nptel.ac.in/courses/103105106/">CL - 602 mathematical and statistical methods </a>: NPTEL course.</li>
+                               <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/chemical/cl%20603%20optimization/Optimization%20of%20Chemical%20Processes%20-%20Edgar%20Himmelblau%20and%20Lasdon%202nd%20ed">CL 603 optimization </a>: Transport phenomena book and solutions</li>
+                                <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/chemical/cl%20605%20advance%20reaction%20engineering/chechical%20reaction%20engineering.zip">CL 605 advance reaction engineering  </a>:  Chemical reaction engineering book and it's solutions.</li>
+                                 <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/chemical/cl%20607%20advance%20thermodynamics/book.zip">CL - 607 advance thermodynamics </a>: Books.</li>
+                                  <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/chemical/cl%20656%20colloid%20and%20interfecial%20engineering/book.zip">CL - 656 colloid and interfecial engineering </a>: Books.</li>
+                               <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/chemical/cl%20701%20computational%20method/CL-701-Lecture-Notes%20patwardhan%20sir.pdf">CL 701 computational method </a>: Books.</li>    
+                              
+
+
+                           </ul>
+                           </div>
+                        </div>
+                     </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color:  #ff6600">
+                           <h4 class="panel-title">
+                              <a style="text-decoration: none;" class="panel_he" data-toggle="collapse" data-parent="accordion" href="#collapse4"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Chemistry</a>
+                           </h4>
+                        </div>
+                        <div id="collapse4" class="panel-collapse collapse">
+                           <div class="panel-body"><h3 style="color: #000;font-weight: 900">Courses</h3>
+                           <ul class="back">
+                              <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/chemistry/1st_semester-2016-06-15.zip">Semester-I course material</a></li>
+                              <li><a target="_blank" href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/chemistry/2nd_semester-2016-06-15.zip">Semester-II course material</a></li>
+                           </ul>
+                           </div>
+                        </div>
+                     </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color:  #ff6600">
+                           <h4 class="panel-title">
+                              <a style="text-decoration: none;" class="panel_he" data-toggle="collapse" data-parent="accordion" href="#collapse5"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Computer Science & Engineering</a>
+                           </h4>
+                        </div>
+                        <div id="collapse5" class="panel-collapse collapse">
+                           <div class="panel-body"><h3 style="color: #000;font-weight: 900">Courses</h3>
+                           <ul class="back">
+                              <li>CS601 - Algorithms and Complexity
+                                <ul>
+                                   <li><a target="_blank" href="http://www.icsd.aegean.gr/kaporisa/index_files/Algorithm_Design.pdf">Algorithm design</a></li>
+                                    <li><a target="_blank" href="https://www.hackerrank.com/domains/algorithms/warmup">Hackerrank problems</a></li>
+                                    <li><a target="_blank" href="https://www.cse.iitb.ac.in/~cs601/">Course page</a></li>
+                                     <li><a target="_blank" href="http://courses.csail.mit.edu/6.006/fall11/">MIT course</a></li> 
+                                </ul>
+                                 
+
+                              </li>
+                              <li>CS683 - Advanced Computer Architecture
+                                <ul>
+                                   <li><a target="_blank" href="http://nptel.ac.in/courses/106102062/">NPTEL course</a></li>
+                                    <li><a target="_blank" href="http://csenote.weebly.com/advanced-computer-architecture.html">Notes</a></li>
+                                </ul>
+                                 
+                              </li>
+                              <li><a target="_blank" href="https://www.cse.iitb.ac.in/~ranade/606/">CS606 - Foundations of Parallel Computation</a></li>
+                              <li><a target="_blank" href="https://www.cse.iitb.ac.in/~ajitvr/CS663_Fall2014/">CS663 - Digital Image Processing</a></li>
+                               <li><a target="_blank" href="https://www.cse.iitb.ac.in/~paragc/teaching/2015/cs675/">CS675 - Computer Graphics</a></li>
+                              <li><a target="_blank" href="https://www.cse.iitb.ac.in/~cs641/">CS641 - Computer Networks</a></li>
+                             <li>Python Scripting
+                                <ul>
+                                <li><a target="_blank" href="https://wiki.python.org/moin/BeginnersGuide">Beginners guide</a></li>
+                                <li><a target="_blank" href="https://docs.python.org/3/tutorial/">Tutorial</a></li>
+                                </ul>
+
+                             </li>
+                             <li><a target="_blank" href="http://linux.die.net/Bash-Beginners-Guide/">Bash Scripting</a></li>
+                             <li>HTML5 and  CSS3
+                                <ul>
+                                   <li><a target="_blank" href="http://www.w3schools.com/html/">HTML</a></li>
+                                    <li><a target="_blank" href="http://www.w3schools.com/css/default.asp">CSS</a></li>
+
+                                </ul>
+
+                             </li>
+                             <li><a href="http://nptel.ac.in/courses/106101007/" target="_blank">Natural Language Processing</a></li>
+                             <li>Design & Implementation of Functional Programming
+                               <ul>
+                                  <li><a href="http://www.learnyouahaskell.com/" target="_blank">Learn haskell</a>
+                                  <li><a target="_blank" href="https://wiki.haskell.org/Tutorials">Tutorial</a></li>
+                                  <li><a href="https://www.youtube.com/watch?v=ZhuHCtR3xq8" target="_blank">Video</a>
+                               </ul>
+                            </li>
+                            <li>Implementation Techniques for Relational Database Systems
+                                <ul>
+                                   <li><a href="https://www.cse.iitb.ac.in/~sudarsha/db-book/slide-dir/" target="_blank">Slides</a></li>
+                                   <li><a href="https://gymkhana.iitb.ac.in/~scp/scp/www.cse.iitb.ac.in/infolab/Data/Courses/CS631/" target="_blank">Course Page</a></li>
+                                   <li><a href="https://www.youtube.com/watch?v=6OemZEJdMp8" target="_blank">Video</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="https://www.cse.iitb.ac.in/~erts/" target="_blank">Embedded Systems</a></li>
+                            <li>Topics in Virtualization and Cloud Computing
+                             <ul>
+                                <li><a href="https://www.cse.iitb.ac.in/~puru/courses/autumn15/cs695/notes/">Course Notes</a></li>
+                                <li><a href="http://moodle2.insa-lyon.fr/pluginfile.php/16715/course/section/4469/Linux%20Kernel%20Development%203rd%20Edition%20-%20Love%20-%202010.pdf">Linux Kernel Development</a></li>
+                                <li><a href="http://gauss.ececs.uc.edu/Courses/c4022/code/memory/understanding.pdf">Understanding LInux Kernel</a></li>
+                             </ul>
+                            </li>
+                            <li>Introduction to Computational Complexity
+                              <ul>
+                                 <li><a href="https://www.cse.iitb.ac.in/~nutan/cs721-2015.html" target="_blank">Course Page</a></li>
+                                 <li><a href="https://youtu.be/moPtwq_cVH8" target="_blank">Video</a></li>
+                                 <li><a href="http://cs.brown.edu/~jes/book/pdfs/ModelsOfComputation.pdf" target="_blank">Modes of computation</a></li>
+                                 <li><a href="http://theory.cs.princeton.edu/complexity/book.pdf" target="_blank">Computational complexity
+                                 </a></li>
+                              </ul>
+                               
+                            </li>
+                            <li>foundations of machine learning
+                              <ul>
+                                 <li><a href="https://www.coursera.org/learn/machine-learning" target="_blank">Coursera machine learning course</a></li>
+                                 <li><a href="https://www.cse.iitb.ac.in/~sunita/cs725/" target="_blank">Course page</a></li>
+                                 <li><a href="https://www.udacity.com/course/intro-to-machine-learning--ud120" target="_blank">Udacity Course-I</a></li>
+                                 <li><a href="https://www.udacity.com/course/machine-learning--ud262" target="_blank">Udacity Course-II</a></li>
+                              </ul>
+                               
+                            </li>
+                            <li>Mathematics for Visual Computing
+                             <ul>
+                                <li><a href="https://www.cse.iitb.ac.in/~sharat/current/cs740/" target="_blank">Course Page</a></li>
+                                <li><a href="https://www.cse.iitb.ac.in/~sharat/current/cs740/notes/" target="_blank">Course Notes</a></li>
+                                <li><a href="http://www.cs.allegheny.edu/~jwenskovitch/teaching/CMPSC382/schedule.html" target="_blank">Allegheny college course page</a></li>
+                                <li><a href="http://www.cs.toronto.edu/~guerzhoy/320/" target="_blank">University of toronto course page</a></li>
+                             </ul>
+                               
+                            </li>
+                            <li>Unix shell scripting
+                              <ul>
+                                 <li><a href="http://www.tutorialspoint.com/unix/" target="_blank">Tutorial</a></li>
+                                 <li><a href="http://www.freeos.com/guides/lsst/" target="_blank">Beginner's handbook</a></li>
+                                 <li><a href="http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html" target="_blank">BASH Programming</a></li>
+
+                              </ul>
+
+                            </li>
+                            <li>SED & AWK
+                             <ul>
+                                <li><a href="http://www.grymoire.com/Unix/Awk.html" target="_blank">AWK reading material</a></li>
+                                <li><a href="http://www.tutorialspoint.com/awk/" target="_blank">AWK tutorial</a></li>
+                                <li><a href="http://www.grymoire.com/Unix/Sed.html" target="_blank">SED reading material</a></li>
+                                <li><a href="http://www.tutorialspoint.com/sed/" target="_blank">SED tutorial</a></li>
+                             </ul>
+                               
+                            </li>
+                            <li>Latex
+                              <ul>
+                                 
+                                 <li><a href="https://www.sharelatex.com/" target="_blank">Latex online editor</a></li>
+                                 <li><a href="https://www.latex-tutorial.com/" target="_blank">Tutorial</a></li>
+                                 <li><a href="https://www.tug.org/twg/mactex/tutorials/ltxprimer-1.0.pdf" target="_blank">Tutorial pdf</a></li>
+                              </ul>
+
+                            </li>
+                            <li>JavaScript
+                             <ul>
+                                <li><a href="http://www.tutorialspoint.com/javascript/" target="_blank">Tutorial 1</a></li>
+                                <li><a href="http://www.w3schools.com/js/" target="_blank">Tutorial 2</a></li>
+                                <li><a href="" target="_blank"></a>JavaScript: The Definitive Guide by O'Reilly Media</li>
+                             </ul>
+                               
+                            </li>
+                            <li>Java
+                               <ul>
+                               <li><a href="http://www.tutorialspoint.com/java/">Tutorial</a></li>
+                               <li><a href="http://www.learnjavaonline.org/">Learn Online</a></li>
+                               </ul>
+                            </li>
+                            <li>PHP<ul><li><a href="http://www.w3schools.com/php/" target="_blank">Tutorial</a></li></ul></li>
+                            <li>Git
+                             <ul>
+                                <li><a href="https://git-scm.com/book/en/v2/Getting-Started-Git-Basics" target="_blank">Basics</a></li>
+                                <li><a href="https://try.github.io/levels/1/challenges/1" target="_blank">Practice portal</a></li>
+                             </ul>
+                               
+                            </li>
+                           </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color:  #ff6600">
+                           <h4 class="panel-title">
+                              <a style="text-decoration: none;" class="panel_he" data-toggle="collapse" data-parent="accordion" href="#collapse6"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Civil Engineering</a>
+                           </h4>
+                        </div>
+                        <div id="collapse6" class="panel-collapse collapse">
+                           <div class="panel-body"> <h3 style="color: #000;font-weight: 900">Courses</h3>
+                           <ul class="back">
+                              <li><a href="http://nptel.ac.in/courses/105108130/" target="_blank">CE 676 - Water Resources Systems</a>: NPTEL Spurce</li>
+                              <li><a href="http://www.cdeep.iitb.ac.in/vod/vodCloud/course_intra.php?ccode=154" target="_blank">CE 626 - Groundwater Systems Planning and Management </a>CDEEP Course</li>
+                              <li><a href="http://www.cdeep.iitb.ac.in/vod/vodCloud/course_intra.php?ccode=65" target="_blank">CE 669 - Physical and Stochastic Hydrology </a>CDEEP Course</li>
+                              <li><a href="http://nptel.ac.in/courses/105101082/" target="_blank">CE 731 - Mechanics of Fluid Flow</a> : NPTEL course.</li>
+                              <li><a href="http://nptel.ac.in/courses/105101134/" target="_blank">CE 684 - Advanced Earthquake Engineering </a>: NPTEL course.</li>
+                              <li><a href="https://www.civil.iitb.ac.in/tvm/1106_ce740/ce740/ce740.html" target="_blank">CE 740 - Traffic Engineering </a> : Course page.</li>
+                              <li><a href="https://www.civil.iitb.ac.in/~dhingra/ce751.htm" target="_blank">CE 751 - Urban Transportation System Planning </a>Course Page</li>
+                              <li><a href="http://www.nptel.ac.in/courses/105106117/" target="_blank">CE 448 - Prestresseed Concrete Structures </a>NPTEL Source</li>
+                              <li><a href="http://nptel.ac.in/courses/105102012/" target="_blank">CE 613 - Concrete Technology </a>NPTEL Course</li>
+                              <li><a href="http://nptel.ac.in/courses/105101006/" target="_blank">CE 616 - Structural Dynamics</a>: NPTEL course.</li>
+                              <li><a href="http://nptel.ac.in/courses/111105038/" target="_blank">CE 603 - Numerical Methods </a>: NPTEL course.</li>
+                           </ul>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color:  #ff6600">
+                           <h4 class="panel-title">
+                              <a style="text-decoration: none;" class="panel_he" data-toggle="collapse" data-parent="accordion" href="#collapse7"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;HSS</a>
+                           </h4>
+                        </div>
+                        <div id="collapse7" class="panel-collapse collapse">
+                           <div class="panel-body"> <h3 style="color: #000;font-weight: 900">Reading Material</h3>
+                           <ul class="back">
+                              <li><a href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/hss/HSS%20Useful%20links.pdf" target="_blank">HSS Useful Links</a></li>
+                              <li><a href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/hss/Avoiding%20Plagiarism%20-%20Graduate%20School%20-%20School%20of%20Social%20and%20Political%20Science.pdf" target="_blank">Avoiding Plagiarism</a></li>
+                           </ul>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color:  #ff6600">
+                           <h4 class="panel-title">
+                              <a style="text-decoration: none;" class="panel_he" data-toggle="collapse" data-parent="accordion" href="#collapse8"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Electrical Engineering</a>
+                           </h4>
+                        </div>
+                        <div id="collapse8" class="panel-collapse collapse">
+                           <div class="panel-body"> <h3 style="color: #000;font-weight: 900">Courses</h3>
+                           <ul class="back">
+                              <li>EE601 - Stat. Signal Analysis
+                                   <ul>
+                                      <li>CDEEP course by<strong> Prof. U. B. Desai</strong> - Autumn 2008</li>
+                                      <li><a href="http://www.nptelvideos.in/2012/12/probability-random-variables.html" target="_blank">Probability random variable</a></li>
+                                      <li><a href="http://www.ee.iitm.ac.in/~krishnaj/EE5110.htm" target="_blank">Probability Foundations for Electrical Engineers</a></li>
+                                   </ul>
+                                 
+                              </li>
+                              <li>EE603 - Digital Signal Processing and Applications
+                                <ul>
+                                   <li>CDEEP course by <strong>Prof. V. M. Gadre</strong> - Autumn 2012</li>
+                                   <li><a href="http://nptel.ac.in/courses/108105055/" target="_blank">NPTEL Course</a></li>
+                                </ul>
+
+                              </li>
+                              <li>EE606 - Fibre Optic Communication
+                                <ul><li>CDEEP course by <strong>Prof. R. K. Shevgaonkar</strong> - Spring 2008</li></ul>
+                              </li>
+
+                        
+                           <li>EE610 - Image Processing
+                              <ul>
+                                 <li><a href="http://www.wisegeek.org/what-is-image-processing.htm" target="_blank">Defination</a></li>
+                                 <li><a href="http://nptel.ac.in/courses/117105079/" target="_blank">NPTEL Course</a></li>
+                                 <li><a href="http://www.cs.toronto.edu/~jepson/csc2503/segmentation.pdf" target="_blank">Image Segmentation</a></li>
+                                 <li>CDEEP course by <strong>Prof. Subhasis Chaudhuri</strong> - Autumn 2009</li>
+                              </ul>
+                           </li>
+                           <li><a href="http://nptel.ac.in/courses/108101002/" target="_blank">EE 613 - Non Linear Dynamical Systems</a>
+                           </li>
+                           <li>EE 616 - Electronics System Design
+                              <ul><li>Follow senior's notes and last year papers</li></ul>
+                           </li>
+                           <li>EE619 - CMOS Analog VLSI Design
+                                <ul>
+                                   <li><strong>Prof. Maryam's</strong> course in Autumn 2015 on <strong>www.cdeep.iitb.ac.in</strong>(Once you register,courses will be displayed and you have to enroll for a particular course)</li>
+                                   <li><a href="http://nptel.ac.in/courses/117106030/" target="_blank">NPTEL course</a></li>
+                                   <li><a href="http://www.cmosedu.com/jbaker/courses/ece5411/f08/lec5411.htm" target="_blank">Lecture notes for CMOS Analog IC Design</a>
+                                </ul>
+                           </li>
+                           <li>EE635 - App. Linear Algebra
+                             <ul>
+                                <li><a href="http://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/">MIT course page</a></li>
+                                <li><a href="https://www.youtube.com/watch?v=ZK3O402wf1c&list=PL49CF3715CB9EF31D">MIT course youtube video</a></li>
+                             </ul>
+
+                           </li>
+                           <li>
+                              <a href="http://nptel.ac.in/courses/108101038/" target="_blank">EE653 - Power Electronics – I</a>
+                           </li>
+                           <li><a href="http://nptel.ac.in/courses/108107028/" target="_blank">EE655 - Computer Aided Power System Analysis</a></li>
+                           <li>EE657 - Electric Drives
+                           <ul><li>Course by <strong>Prof.Kishore Chatterjee</strong> in <strong>www.cdeep.iitb.ac.in</strong></li></ul>
+
+                           </li>
+                           <li>EE669 - VLSI Technology
+                           <ul><li><a href="http://nptel.ac.in/courses/117106093/" target="_blank">NPTEL Course</a></li>
+                           <li><strong>Prof.Rao's</strong> Course on <strong>www.cdeep.iitb.ac.in</strong></li>
+                           </ul>
+                           
+                           </li>
+                           <li>EE 671 - VLSI Design
+                            <ul><li><strong>Prof. Jayanta's</strong> course in Autumn 2008</li>
+                            <li><a href="http://nptel.ac.in/courses/117101004/" target="_blank">NPTEL Course</a></li></ul>
+                           </li>
+                           <li>EE 675 - Microprocessor Applications in Power Electronics
+                           <ul><li><strong>Prof. Mukul's </strong>course in Autumn 2008</li></ul></li>
+                           <li>EE 679 - Speech Processing
+                           <ul>
+                              <li><a href="http://nptel.ac.in/courses/106101007/" target="_blank">Natural Language Processing Course</a></li>
+                              <li><a href="http://www.ece.ucsb.edu/Faculty/Rabiner/ece259/speech%20course.html" target="_blank">Digital Speech Processing Course</a></li>
+                              <li><a href="http://speech.tifr.res.in/tutorials/" target="_blank">Tutorial</a></li>
+                           </ul></li>
+                           <li><a href="http://www.ee.iitm.ac.in/~andrew/videolectures/EE419/" target="_blank">EE703 - Digital Message Transmission</a></li>
+                           <li>EE 717 - Advance Computing for Electrical Engineers<ul><li><strong>Prof. Shankar's</strong> course in Autumn 2014 and <strong>Prof. Virendra's</strong> course in Autumn 2013</li></ul></li>
+                           <li>EE 750 - DSP System design and Implementation<ul><li>For theory follow references for EE 603 and for implementation a sound knowledge of C is required</li></ul></li>
+                           <li><a href=https://nanohub.org/courses/ECE606/01a"" target="_blank">EE 733 - Solid State Devices</a></li>
+                         </ul>
+                         <p>For CDEEP courses - <a href="http://video.cdeep.iitb.ac.in/" target="_blank">click here</a> and login using your LDAP id and password and see archived courses.   </p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color:  #ff6600">
+                           <h4 class="panel-title">
+                              <a style="text-decoration: none;" class="panel_he" data-toggle="collapse" data-parent="accordion" href="#collapse9"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Mathematics</a>
+                           </h4>
+                        </div>
+                        <div id="collapse9" class="panel-collapse collapse">
+                           <div class="panel-body">
+                           <h3 style="color: #000;font-weight: 900">Material</h3>
+                           <a href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/maths/books.zip" target="_blank">Download Link</a>
+
+                           </div>
+                        </div>
+                     </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color:  #ff6600">
+                           <h4 class="panel-title">
+                              <a style="text-decoration: none;" class="panel_he" data-toggle="collapse" data-parent="accordion" href="#collapse10"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Mechanical Engineering</a>
+                           </h4>
+                        </div>
+                        <div id="collapse10" class="panel-collapse collapse">
+                           <div class="panel-body"> <h3 style="color: #000;font-weight: 900">Courses</h3>
+                           <ul class="back">
+                              <li><a href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/mechanical/machine%20design.zip" target="_blank">Machine design reading material</a></li>
+                              <li><a href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/mechanical/thermal_2014_PAPERS.zip" target="_blank">Thermal 2014 papers</a></li>
+                              <li><a href="https://gymkhana.iitb.ac.in/~scp/scp/ocw/mechanical/thermal_2015_PAPERS.zip" target="_blank">Thermal 2015 papers</a></li>
+
+                           </ul>
+                           </div>
+                        </div>
+                     </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" style="background-color:  #ff6600">
+                           <h4 class="panel-title">
+                              <a style="text-decoration: none;" class="panel_he" data-toggle="collapse" data-parent="accordion" href="#collapse11"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;MEMS</a>
+                           </h4>
+                        </div>
+                        <div id="collapse11" class="panel-collapse collapse">
+                           <div class="panel-body"><h3 style="color: #000;font-weight: 900">Courses</h3>
+                           <ul class="back">
+                              <li><a href="http://nptel.ac.in/courses/113106034/" target="_blank">Structural Characterization of Materials</a></li>
+                              <li><a href="http://nptel.ac.in/courses/113106031/" target="_blank">Metallurgical Thermodynamics</a></li>
+                              <li><a href="https://www.youtube.com/playlist?list=PL090DAFDD7A36E27B" target="_blank">Physics of materials</a></li>
+                              <li><a href="https://www.youtube.com/playlist?list=PLbMVogVj5nJS_jlBSbduzYmy6YX_K4KyM" target="_blank">Thermodynamics</a></li>
+                              <li><a href="http://www.nptel.ac.in/courses/112107090/" target="_blank">Welding Technology</a></li>
+                              <li><a href="http://ocw.mit.edu/courses/materials-science-and-engineering/3-22-mechanical-behavior-of-materials-spring-2008/" target="_blank">Mechanical Behaviours of Materials</a></li>
+                              <li><a href="http://nptel.ac.in/courses/113105057/" target="_blank">Advanced Composites</a></li>
+                              <li><a href="http://nptel.ac.in/courses/113104005/36" target="_blank">Diffusion and Kinetics</a></li>
+                              <li><a href="http://ocw.mit.edu/courses/materials-science-and-engineering/3-35-fracture-and-fatigue-fall-2003/" target="_blank">Fracture and Fatigue</a></li>
+                              <li><a href="http://www.msm.cam.ac.uk/phase-trans/" target="_blank">Phase Transformations</a></li>
+                              <li><a href="http://ocw.mit.edu/courses/materials-science-and-engineering/3-016-mathematics-for-materials-scientists-and-engineers-fall-2005/" target="_blank">Mathematics of Materials Engineering</a></li>
+                              <li><a href="http://www.cdeep.iitb.ac.in/vod/vodCloud/course_intra.php?ccode=205" target="_blank">High Temperature Corrosion</a></li>
+                              <li><a href="http://www.cdeep.iitb.ac.in/vod/vodCloud/course_intra.php?ccode=217" target="_blank">Materials for High Temperature Corrosion</a></li>
+                              <li><a href="http://www.cdeep.iitb.ac.in/vod/vodCloud/course_intra.php?ccode=2" target="_blank">Protective Coatings</a></li>
+                              <li><a href="https://www.youtube.com/watch?v=5OxdXq91TV0&list=PLbMVogVj5nJRb1Hukxce_fNcQ5D74Pn91" target="_blank">Aqueous Corrosion and its Control</a></li>
+                              <li><a href="http://nptel.ac.in/courses/103106068/28" target="_blank">Transport Phenomena</a></li>
+                              <li><a href="http://nptel.ac.in/courses/113104059/2" target="_blank">Steel Making</a></li>
+                              <li><a href="http://nptel.ac.in/courses/113104060/26" target="_blank">Iron Making</a></li>
+                              <li><a href="http://nptel.ac.in/courses/113108051/" target="_blank">Advance in Corrosion Science</a></li>
+                              <li><a href="http://nptel.ac.in/courses/113101002/" target="_blank">Computational in Material Science</a></li>
+                              <li><a href="http://nptel.ac.in/courses/113106032/" target="_blank">Introduction to Material Science</a></li>
+                              <li><a href="http://nptel.ac.in/courses/113106065/" target="_blank">Fundamental of Electronics and devices</a></li>
+                              <li><a href="http://nptel.ac.in/courses/113104012/" target="_blank">Optoelectronics Materials and Devices</a></li>
+                               <li><a href="http://nptel.ac.in/courses/113105025/" target="_blank">Processing of Semiconductor Devices</a></li>
+
+                           </ul>
+                           <p>For CDEEP courses - <a href="http://video.cdeep.iitb.ac.in/" target="_blank">click here</a> and login using your LDAP id and password.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                 
+                  <!--  OCWs material ENDS  HERE   -->
+               </div>
+            </div>
+            <div id="menu2" class="tab-pane fade" >
+               <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/MtechHandbook2016_17.pdf" class='button' style="text-decoration:none;margin-left: 10px;margin-bottom: 20px">MASTER HANDBOOK&nbsp;<i class="fa fa-download" aria-hidden="true"></i></a>
+               <h4 style=" margin-top:20px;margin-left:10px;font-weight: 900;font-family: Courier New;color: #fff;">HandBooks of various departments are available here</h4>
+               <hr style="margin-left:10px;height:2px;border:none;color:#333;background-color:#ff6600;margin-right:50px;margin-top: -10px" />
+               <div class="list-group" style="margin-right: 50px">
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/aero.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Aerospace Engineering&nbsp;<i class="fa fa-download" aria-hidden="true"></i></a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/bsbe.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Bioscience & Bioengineering(MSc)&nbsp;<i class="fa fa-download" aria-hidden="true"></i></a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/bsbemt.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Bioscience & Bioengineering(MTech)&nbsp;<i class="fa fa-download" aria-hidden="true"></i></a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/cese.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Centre for Environmental Science and Engineering&nbsp;<i class="fa fa-download" aria-hidden="true"></i> </a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/chemical.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Chemical Engineering&nbsp;<i class="fa fa-download" aria-hidden="true"></i> </a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/chemistry.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Chemistry&nbsp;<i class="fa fa-download" aria-hidden="true"></i> </a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/civil.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Civil Engineering&nbsp;<i class="fa fa-download" aria-hidden="true"></i></a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/cse.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Computer Science & Engineering&nbsp;<i class="fa fa-download" aria-hidden="true"></i> 
+                  </a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/earth.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Earth Sciences&nbsp;<i class="fa fa-download" aria-hidden="true"></i> </a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/elec.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Electrical Engineering&nbsp;<i class="fa fa-download" aria-hidden="true"></i></a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/energy.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Energy Science and Engineering&nbsp;<i class="fa fa-download" aria-hidden="true"></i> </a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/hss.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;HSS&nbsp;<i class="fa fa-download" aria-hidden="true"></i></a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/idc.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Industrial Design Centre&nbsp;<i class="fa fa-download" aria-hidden="true"></i> </a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/ieor.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;IEOR&nbsp;<i class="fa fa-download" aria-hidden="true"></i> </a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/math.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Mathematics&nbsp;<i class="fa fa-download" aria-hidden="true"></i>  </a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/mech.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Mechanical Engineering&nbsp;<i class="fa fa-download" aria-hidden="true"></i> </a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/mems.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Metallurgical Engineering & Materials Science&nbsp;<i class="fa fa-download" aria-hidden="true"></i>  </a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/phy.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Physics &nbsp;<i class="fa fa-download" aria-hidden="true"></i>  </a>
+                  <a href="https://gymkhana.iitb.ac.in/~scp/scp/file/syscon.pdf" target="_blank" class="list-group-item" style="color: #fff"><i class="fa fa-arrow-right" aria-hidden="true"></i>&nbsp;Syscon&nbsp;<i class="fa fa-download" aria-hidden="true"></i>  </a>
+               </div>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+               <h3>Menu 3</h3>
+            </div>
+         </div>
+      </div>
+      <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+      <!--footer start from here-->
+      <br><br><br>
+      <footer>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-4 col-sm-6 footerleft ">
+                  <div class="logofooter" style="color: #fff;font-family: Courier New;">ISCP </div>
+                  <p style="font-family: Courier New"> ISCP provides a platform for the students to get help at formal as well as informal lines.ISCP is monitored by the Dean AP office. Students are requested to make best use of the resources made available to them by the ISCP</p>
+                  <p><i class="fa fa-map-pin"></i> IIT Powai , Mumbai -       400076 , INDIA</p>
+                  <p><i class="fa fa-phone"></i> Phone (India) : +91 9415 056 043</p>
+                  <p><i class="fa fa-envelope"></i> E-mail : iscp@iitb.ac.in</p>
+               </div>
+               <div class="col-md-2 col-sm-6 paddingtop-bottom">
+                  <h6 class="heading7" style="color: #fff;font-family: Courier New;">GENERAL LINKS</h6>
+                  <ul class="footer-ul">
+                     <li><a href="test1.html"> Home</a></li>
+                     <li><a href="test2.html"> General Information</a></li>
+                     <li><a href="test31.html"> Acadmics</a></li>
+                     <li><a href="#"> Extra Curriculars</a></li>
+                     <li><a href="#"> Campus Life</a></li>
+                     <li><a href="#"> Counselling</a></li>
+                     <li><a href="test4.html"> Our Team</a></li>
+                  </ul>
+               </div>
+               <div class="col-md-3 col-sm-6 paddingtop-bottom">
+                  <h6 class="heading7" style="color: #fff;font-family: Courier New;margin-bottom: 1px">Feed Backs</h6>
+                  <a style="font-style: 5px;margin-top: -10px" href="https://goo.gl/forms/0FK90d7C5RcZbP6d2">form available here also</a>
+                  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe0AqrhfvGYO_Pij-VmJAtBtzrBcbWRhjtSDbfmujOEFTRwRA/viewform?embedded=true" width="300" height="260" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+               </div>
+               <div class="col-md-3 col-sm-6 paddingtop-bottom">
+                  <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                     <div style="margin-left: 40px" class="fb-xfbml-parse-ignore">
+                        <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/iitb.iscp/">Facebook</a></blockquote>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!--footer start from here-->
+      <div class="copyright">
+         <div class="container">
+            <div class="col-md-6">
+               <p>© 2017 - Designed by <a href="test1.html#target1">Web/Design Nominee</a></p>
+            </div>
+            <div class="col-md-6">
+               <ul class="bottom_ul">
+                  <li><a href="test1.html#target2">About us</a></li>
+                  <li><a href="test2.html">Faq's</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
