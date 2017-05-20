@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>ISCP</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/ken_css.css">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <style>
+       .col-sm-1 {
+ position:relative;
+ min-height: 100px;
+ padding-right:15px;
+ padding-left:15px;
+ }
+         
+       
+
+         body {
+         background-color: #ffffff;
+         }
+         @media only screen and (max-width: 1025px)
+         {
+         .hi { 
+         display:none;
+         }
+         }
+         @media only screen and (max-width: 799px)
+         {
+         #useless {
+         display: none;
+         }
+         #column1 {
+         display: none;
+         }
+         .imageH { 
+         display:none;
+         }
+         #columnF {
+         display: none;
+         }
+         }
+         @media only screen and (min-width: 766px)
+         {
+         #home {
+         align-content: center;padding-left: 8px;
+         font-size:30px;
+         }
+         #gi {
+         align-content: center;padding-left: 70px;
+         font-size:30px;
+         }
+         #ac {
+         align-content: center;padding-left: 29px; 
+         font-size:28px;
+         }
+         #ec {
+         align-content: center;padding-left: 66px; 
+         font-size: 30px;
+         }
+         #cl {
+         align-content: center;padding-left: 32px;  
+         padding-bottom: 5px;  font-size: 25px;
+         }
+         #cc {
+         align-content: center;padding-left: 37px;
+         padding-bottom: 5px;  font-size: 25px;
+         }
+         #it {
+         align-content: center;padding-left: 30px;
+         padding-bottom: 5px ;font-size: 25px
+         }
+         }
+         @media only screen and (max-width: 766px)
+         {
+         #home {
+         font-size:30px;
+         }
+         #gi {
+         font-size:30px;
+         }
+         #ac {
+         font-size:28px;
+         }
+         #ec {
+         font-size: 30px;
+         }
+         #cl {
+         padding-bottom: 5px;  font-size: 25px;
+         }
+         #cc {
+         padding-bottom: 5px;  font-size: 25px;
+         }
+         #it {
+         padding-bottom: 5px ;font-size: 25px
+         }
+         }
+         /*
+         COLUMN MANAGEMENT
+         =======================================================================================
+         */
+         /*.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9 {
+         position:relative;
+         min-height:300px;
+         padding-right:15px;
+         padding-left:15px;
+         } */
+
+
+ /*DropDown menu change P.S its more than that I am lazy to explain however this comment will remind me of what it is*/
+ .navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.active>a:focus,.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:focus,.navbar-inverse .navbar-nav>.open>a:hover {
+ color:#fff;
+ background-color: #00e6e6;
+ }
+ /*DropDown menu change*/
+ .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus,.navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover {
+ color:#4747d1;
+ background-color: #ffffff;
+ }
+ /*Boder  shitt of navBar took 1h to find */
+ .navbar-inverse {
+ border-color:  #ffffff;
+ }
+ /* onClick color of each  ACTIVE tab on navBar*/
+ .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+ color: #fff;
+ background-color:#00e6e6;
+ }
+ /*Drop down menu properties */
+ .dropdown-menu>li>a {
+ display: block;
+ padding: 3px 20px;
+ clear: both;
+ color:#fff;
+ font-weight: 600;
+ line-height: 2.4;
+ white-space: nowrap;
+ }
+ /* onClick color of each  open tab on navBar */
+ .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+ color: #fff;
+ background-color: #00e6e6;
+ }
+ /*Hover color change to white in tab text - icons*/
+ .navbar-inverse .navbar-nav>li>a:hover {
+ color: #76c2ff;
+ background-color: transparent;
+ } 
+ /*Color of wholw navbar*/
+ #myNavbar1 {
+ background-color:  #ffffff;
+ }
+ /*Color of Text-Icons in Eact Tab*/
+ .navbar-inverse .navbar-nav>li>a {
+ color: #4747d1;
+ font-style:bold;
+ font-weight: 600;
+ }
+
+ .navbar-inverse .navbar-toggle:hover {
+ background-color:#0000ff;
+ }
+ navbar.less:579
+ .navbar-inverse .navbar-toggle {
+ border-color: #988eaf;
+ }
+ 
+ .navbar-toggle {
+ position: relative;
+ float: right;
+ margin-top: 18px;
+ margin-right: 15px;
+ margin-bottom: 8px;
+ background-color: #0000FF;
+ background-image: none;
+ border: 1px solid transparent;
+ border-radius: 4px;
+ }
+ 
+  .dropdown-menu {
+ background-color: #22e5db;  ;
+ }
+ nav navbar-nav navbar-right.active {
+ background-color:#00e6e6;
+ }
+ .navbar-btn {
+ margin-top: 15px;
+ margin-bottom: 10px;
+ padding-right: 6px;
+ padding-left: 6px;
+ margin-left: 10px;
+ margin-right:20px;
+ }
+
+         /*
+         ============================================================================================
+         CAUTION>BOOTSTRAP CSS MODIFICATION [END]<CAUION 
+         =============================================================================================
+         */
+         .list-group-item {
+         position: relative;
+         display: block;
+         padding: 1px 1px;
+         margin-bottom: -1px;
+         background-color: #3f3;
+         border: 1px solid #3f3;
+         }
+         .btn-danger {
+         color: #fff;
+         background-color: #a6ff4d;
+         border-color: #a6ff4d;
+         }
+         .headding{
+
+            color: #0000ff;
+         }
+         .akl:hover {
+
+            color: #fff;
+
+
+            
+
+         }
+.panel-body{
+   background-color: #00ffff;
+   color: #000099;
+   font-family: Courier New;
+}
+
+  @media (max-width: 769px){
+   
+   .collapse-770{
+      display: none;
+   }
+}
+@media (min-width: 769px){
+   .collapse-769{
+       display: none;
+   }
+}
+#down-buzz {
+   
+      background: #d9b3ff;
+    position :relative;
+    
+    -webkit-animation: mymove 1.5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 1.5s infinite;
+}
+
+@-webkit-keyframes mymove {
+    0%   {top: 6px;}
+    25%  {top: -6px;}
+    50% {top:6px;}
+    75%  {top: -6.0px}
+    100% {top: 6px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+     0%   {top: 6px;}
+    25%  {top: -6px;}
+    50% {top:6px;}
+    75%  {top: -6.0px}
+    100% {top: 6px;}
+}
+    .panel-title{
+       font-family:Courier New;
+       font-weight:900;
+       color:#0000ff;
+   }
+    .tab-pane>p {
+      color :#0000ff;
+      font-family: Courier New;
+   }
+   .tab-pane>h3 {
+       color :#0000ff;
+      font-family: Courier New;
+      font-weight:900;
+   }
+
+
+      </style>
+   
+   </head>
+   <body>
+
+    <!--  <div class="hi">
+         <div class="container-fluid" style="background-color: #76c2ff">
+            <div class="row">
+               <div class="col-sm-1" style="background-color:#76c2ff;">
+                  "verticalLine m>g  src="ken_images/iscplogo3.jpg" width="380px" height="105px"  style="margin-left: -39px">
+               </div>
+               <div class="col-sm-10" style="background-color:#76c2ff;">
+                  <h1 class="cab"></h1>
+               </div>
+            </div>
+         </div>
+      </div> -->
+
+      <nav class="navbar navbar-inverse" id="myNavbar1">
+         <div class="container-fluid" style="padding-left: 0px">
+            <div class="navbar-header" style="background-color: #ffffff;" >
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>                        
+               </button>
+               <a class="navbar-brand" href="#" style="background-color: #ffffff;margin-bottom: 20px;margin-left: 5px;visibility:hidden;">
+                   <img  src="ken_images/logoedit.jpg" width="176" height="82" style="position: absolute;left: 0;top: 0">
+               </a>
+               <!-- -->
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar" >
+               <!-- <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="">Page 1-1</a></li>
+                      <li><a href="#">Page 1-2</a></li>
+                      <li><a href="#">Page 1-3</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Page 2</a></li>
+                  <li><a href="#">Page 3</a></li>
+                  </ul> -->
+               <ul class="nav navbar-nav navbar-right" >
+                  <li ><a class="dropdown-toggle" href="test1.html" style="padding-right: 20px" ><i id="home"  class="fa fa-home" ></i><br>      HOME</a></li>
+                   <li>
+                     <a class="dropdown-toggle" href="test2.html"><i id="gi" class="fa fa-info-circle" ></i><br>      GENERAL INFORMATION</a>
+                    
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca" ><i id="ac"  class="fa fa-graduation-cap" ></i><br>      ACADMICS</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="test31.html">Departments</a></li>
+                        <li><a href="test32.html">OCWs</a></li>
+                        <li><a href="test33.html">HandBooks</a></li>
+                        <li><a href="test34.html">Dissertation Topics</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca"><i id="ec" class="fa fa-trophy"></i><br>      EXTRA CURRICULARS</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca"><i id="cl"  class="fa fa-bicycle" ></i> <br>    CAMPUS LIFE</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                     </ul>
+                  </li>
+                  <li class="dropdown">
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="bca"><i id="cc"  class="fa fa-life-ring" ></i> <br>     COUNSELLING</a>
+                     <ul class="dropdown-menu">
+                        <li><a href="#">Page 1-1</a></li>
+                        <li><a href="#">Page 1-2</a></li>
+                        <li><a href="#">Page 1-3</a></li>
+                     </ul>
+                  </li>
+                   <li class="active">
+                     <a class="dropdown-toggle" href="test4.html"><i id="it" class="fa fa-info-circle" ></i><br>    ISCP TEAM</a>
+                  </li>
+               </ul>
+               <!-- <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#" id="bca"><i class="fa fa-external-link-square" style="align-content: center;padding-left: 12px" ></i><br>Login</a></li>
+                  </ul> -->
+            </div>
+         </div>
+      </nav> <hr style="height:2px;border:none;color:#333;background-color:#0000ff;margin-left: -10px;margin-top: -20px" /> 
+
+
+
+
+
+
+
+
+ <div class="container" style="border-radius: 10px;background-color: #00ffff;margin-bottom: 10px;overflow: hidden" >
+
+             <h2 class=" headding">ISCP Team</h2>
+             <p style="font-family: Courier New;color: #0000ff;text-align: justify;" >ISCP Team comprises of Department Companions for each department and Student Companions each student companion have seven to eight menties under him/her.Companion are the primary source of contact to get your doubts cleared. Feel free to contact Companion which you are comfortable to talk with.</p>
+
+            </div><br>
+
+    <div class="collapse-770" style="overflow: hidden;">
+<div id="la" class="container" style="border-radius: 10px;margin-bottom: 20px;padding-top: 20px">
+  
+            
+<div class="row">
+<div class="col-sm-2" style="background-color: #d9b3ff;margin:5px ;border-radius: 10px;">
+<h5 style="font-family: Courier New;color: #fff;padding-top: 15px;">&nbsp;CHOOSE DEPARTMENT</h5>
+
+
+  <ul class="nav nav-pills nav-stacked" style="margin-bottom: 5px;">
+
+    <li class="active"><a data-toggle="tab" href="#menu0">Aerospace Eng.</a></li>
+    <li><a data-toggle="tab" href="#menu1">BSBE</a></li>
+    <li><a data-toggle="tab" href="#menu2">CESE</a></li>
+    <li><a data-toggle="tab" href="#menu3">Chemical Eng.</a></li>
+    <li><a data-toggle="tab" href="#menu4">Chemistry</a></li>
+    <li><a data-toggle="tab" href="#menu5">Civil Eng.</a></li>
+    <li><a data-toggle="tab" href="#menu6">CSE</a></li>
+    <li><a data-toggle="tab" href="#menu7">Earth Science</a></li>
+    <li><a data-toggle="tab" href="#menu8">Electrical Eng.</a></li>
+    <li><a data-toggle="tab" href="#menu9">Energy Science & Eng.</a></li>
+    <li><a data-toggle="tab" href="#menu10">HSS </a></li>
+    <li><a data-toggle="tab" href="#menu12">Mathematics</a></li>
+    <li><a data-toggle="tab" href="#menu13">Mechanical Eng.</a></li>
+    <li><a data-toggle="tab" href="#menu14">MEMES</a></li>
+    <li><a data-toggle="tab" href="#menu15">Physics</a></li>
+    <li><a data-toggle="tab" href="#menu16">System & Control Eng.</a></li>
+
+  </ul>
+</div>
+<div class="col-sm-9" style="background-color: #00ffff;border-radius: 10px;margin:5px">
+  <div class="tab-content">
+    <div id="menu0" class="tab-pane fade in active">
+      <h3>Aerosapce Engineering</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Bio-sciences and Bio-engineering (BSBE)</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Centre for Environmental Science and Engineering (CESE)</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Chemical Engineering</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+    <div id="menu4" class="tab-pane fade">
+      <h3>Chemistry</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+    <div id="menu5" class="tab-pane fade">
+      <h3>Civil Engineering</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+    <div id="menu6" class="tab-pane fade">
+      <h3>Computer Science & Engineering (CSE)</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+    <div id="menu7" class="tab-pane fade">
+      <h3>Earth Sciences</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+    <div id="menu8" class="tab-pane fade">
+      <h3>Electrical Engineering</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+    <div id="menu9" class="tab-pane fade">
+      <h3>Energy Science and Engineering</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+    <div id="menu10" class="tab-pane fade">
+      <h3>Humanities & Social Science</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+    <div id="menu11" class="tab-pane fade">
+      <h3>Industrial Engineering and Operations Research (IEOR)</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+    <div id="menu12" class="tab-pane fade">
+      <h3>Mathematics</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+    <div id="menu13" class="tab-pane fade">
+      <h3>Mathematics</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+    <div id="menu14" class="tab-pane fade">
+      <h3>Metallurgical Engineering & Materials Science</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+    <div id="menu15" class="tab-pane fade">
+      <h3>Physics</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+    <div id="menu16" class="tab-pane fade">
+      <h3>Systems and Control Engineering</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+</div>
+<!--FOR MOBILE SREEN BELOW 770PX-->
+<div class="collapse-769" style="overflow: hidden;">
+<div id="mp" class="container">
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff" >
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse1"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Aerospace Eng.</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff">
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse2"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;BSBE</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff">
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse3"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;CESE</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff">
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse4"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Chemical Eng.</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff">
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse5"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Chemistry</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff">
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse6"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;CSE</a>
+        </h4>
+      </div>
+      <div id="collapse6" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff">
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse7"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Civil Eng.</a>
+        </h4>
+      </div>
+      <div id="collapse7" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff">
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse8"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Earth Science</a>
+        </h4>
+      </div>
+      <div id="collapse8" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff">
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse9"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Electrical Eng.</a>
+        </h4>
+      </div>
+      <div id="collapse9" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff">
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse10"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Energy Science & Eng.</a>
+        </h4>
+      </div>
+      <div id="collapse10" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff">
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse11"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;HSS</a>
+        </h4>
+      </div>
+      <div id="collapse11" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff">
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse12"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Mathematics</a>
+        </h4>
+      </div>
+      <div id="collapse12" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff">
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse13"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Mechanical Eng.</a>
+        </h4>
+      </div>
+      <div id="collapse13" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff">
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse14"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;MEMS</a>
+        </h4>
+      </div>
+      <div id="collapse14" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff">
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse15"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;Physics</a>
+        </h4>
+      </div>
+      <div id="collapse15" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+     <div class="panel panel-default">
+      <div class="panel-heading" style="background-color:  #d9b3ff">
+        <h4 class="panel-title">
+          <a style="text-decoration: none;" data-toggle="collapse" data-parent="#accordion" href="#collapse16"><i class="fa fa-circle" aria-hidden="true"></i>&nbsp;System & Control Eng.</a>
+        </h4>
+      </div>
+      <div id="collapse16" class="panel-collapse collapse">
+        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      </div>
+    </div>
+  </div> 
+ </div> 
+</div> 
+<!-- MOBILE END-->
+
+
+
+
+
+
+         <link href="https://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+<!--footer start from here-->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 footerleft ">
+        <div class="logofooter" style="color: #fff;font-family: Courier New;">ISCP </div>
+        <p style="font-family: Courier New"> ISCP provides a platform for the students to get help at formal as well as informal lines.ISCP is monitored by the Dean AP office. Students are requested to make best use of the resources made available to them by the ISCP</p>
+        <p><i class="fa fa-map-pin"></i> IIT Powai , Mumbai -       400076 , INDIA</p>
+        <p><i class="fa fa-phone"></i> Phone (India) : +91 9415 056 043</p>
+        <p><i class="fa fa-envelope"></i> E-mail : iscp@iitb.ac.in</p>
+        
+      </div>
+      <div class="col-md-2 col-sm-6 paddingtop-bottom">
+        <h6 class="heading7" style="color: #fff;font-family: Courier New;">GENERAL LINKS</h6>
+        <ul class="footer-ul">
+          <li><a href="test1.html"> Home</a></li>
+          <li><a href="test2.html"> General Information</a></li>
+          <li><a href="test31.html"> Acadmics</a></li>
+          <li><a href="#"> Extra Curriculars</a></li>
+          <li><a href="#"> Campus Life</a></li>
+          <li><a href="#"> Counselling</a></li>
+          <li><a href="test4.html"> Our Team</a></li>
+        </ul>
+      </div>
+     <div class="col-md-3 col-sm-6 paddingtop-bottom">
+     <h6 class="heading7" style="color: #fff;font-family: Courier New;margin-bottom: 1px">Feed Backs</h6><a style="font-style: 5px;margin-top: -10px" href="https://goo.gl/forms/0FK90d7C5RcZbP6d2">form available here also</a>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe0AqrhfvGYO_Pij-VmJAtBtzrBcbWRhjtSDbfmujOEFTRwRA/viewform?embedded=true" width="300" height="260" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+      </div>
+      <div class="col-md-3 col-sm-6 paddingtop-bottom">
+        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-height="300" data-small-header="false" style="margin-bottom:15px;" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <div style="margin-left: 40px" class="fb-xfbml-parse-ignore">
+            <blockquote cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/iitb.iscp/">Facebook</a></blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--footer start from here-->
+
+<div class="copyright">
+  <div class="container">
+    <div class="col-md-6">
+      <p>© 2017 - Designed by <a href="test1.html#target1">Web/Design Nominee</a></p>
+
+    </div>
+    <div class="col-md-6">
+      <ul class="bottom_ul">
+        <li><a href="test1.html#target2">About us</a></li>
+        <li><a href="test2.html">Faq's</a></li>
+      
+       
+      </ul>
+    </div>
+  </div>
+</div>
+     
+   </body>
+</html>
